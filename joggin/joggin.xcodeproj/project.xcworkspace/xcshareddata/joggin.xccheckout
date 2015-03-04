@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EDFC8422-BC59-4D5C-97E1-6F5DB1B00789</string>
+	<key>IDESourceControlProjectName</key>
+	<string>joggin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EB562751B13BF7090BD6F29A885AFBE43C038B25</key>
+		<string>git.toptal.com:Victor-Gabriel-Chirino/victor-gabriel-chirino.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>joggin/joggin.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EB562751B13BF7090BD6F29A885AFBE43C038B25</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>git.toptal.com:Victor-Gabriel-Chirino/victor-gabriel-chirino.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EB562751B13BF7090BD6F29A885AFBE43C038B25</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB562751B13BF7090BD6F29A885AFBE43C038B25</string>
+			<key>IDESourceControlWCCName</key>
+			<string>joggin</string>
+		</dict>
+	</array>
+</dict>
+</plist>
