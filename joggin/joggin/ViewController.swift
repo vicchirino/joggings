@@ -13,6 +13,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Check if current User exist
+    
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+       
+        var storyboard = UIStoryboard(name: "login", bundle: nil)
+        var controller = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
+        
+        self.presentViewController(controller, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
