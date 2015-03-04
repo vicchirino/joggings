@@ -11,9 +11,12 @@ import UIKit
 class LoginViewController: UIViewController {
     
     var containerViewController: InfoLoginContainerViewController!
+    var currentTag: NSInteger!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.currentTag = 1
 
         // Do any additional setup after loading the view.
     }
@@ -31,7 +34,10 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func changeViewController(sender: AnyObject) {
-        containerViewController.swapViewControllers(sender.tag)
+        if(sender.tag != currentTag){
+            containerViewController.swapViewControllers(sender.tag)
+            currentTag = sender.tag
+        }
     }
 
     override func didReceiveMemoryWarning() {

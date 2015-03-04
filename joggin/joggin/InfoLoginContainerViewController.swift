@@ -78,6 +78,8 @@ class InfoLoginContainerViewController: UIViewController {
         self.transitionInProgress = true
         
         if(tag == 1){
+            
+            
             self.currentSegueIdentifier = SegueIdentifierFirst
             if ((self.currentSegueIdentifier == SegueIdentifierSecond) && self.secondViewController != nil){
                 self.swapFromViewController(self.firstViewController, toViewController: self.secondViewController)
