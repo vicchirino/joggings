@@ -14,7 +14,6 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,11 +27,11 @@ class HomeTableViewController: UITableViewController {
         self.user = PFUser.currentUser()
         
         if (user != nil){
-            NSLog("Hay usuario")
+            NSLog("%@", user.username)
+            self.title = "victor"
         }else{
             NSLog("No hay usuario")
         }
-
     }
 
     override func didReceiveMemoryWarning() {

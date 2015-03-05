@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qm8-Wl-yHF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I13-p5-zDh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="J08-Gd-a49">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EG7-bq-wq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="qm8-Wl-yHF" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4jW-H7-ByD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="I13-p5-zDh" kind="relationship" relationship="rootViewController" id="d77-Lg-FIg"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-1069" y="81"/>
-        </scene>
         <!--HomeViewController-->
         <scene sceneID="ba4-ST-BWI">
             <objects>
-                <tableViewController id="Ghk-zK-cmm" userLabel="HomeViewController" customClass="HomeTableViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Victor" id="Ghk-zK-cmm" userLabel="HomeViewController" customClass="HomeTableViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dVa-CR-66G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,12 +25,14 @@
                             <outlet property="delegate" destination="Ghk-zK-cmm" id="Jxy-CK-25U"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Home" id="r1c-sA-qiv" userLabel="Home"/>
+                    <navigationItem key="navigationItem" id="RVt-Z8-F8e">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SK8-ii-m5H"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXX-l6-Z48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="-405"/>
+            <point key="canvasLocation" x="1219" y="-405"/>
         </scene>
         <!--FiltreViewController-->
         <scene sceneID="daK-ct-ZK4">
@@ -99,7 +85,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ghk-zK-cmm" kind="relationship" relationship="viewControllers" id="A6Z-iN-gnu"/>
+                        <segue destination="IMj-Xw-QBA" kind="relationship" relationship="viewControllers" id="A6Z-iN-gnu"/>
                         <segue destination="vtX-Oi-N2h" kind="relationship" relationship="viewControllers" id="6ny-U4-gUP"/>
                         <segue destination="cfS-pH-CAJ" kind="relationship" relationship="viewControllers" id="1Xi-4j-tiE"/>
                     </connections>
@@ -107,6 +93,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFB-wt-7tQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-309" y="81"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="4Vf-9r-ASC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IMj-Xw-QBA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="r1c-sA-qiv" userLabel="Home"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3R-k9-zWt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ghk-zK-cmm" kind="relationship" relationship="rootViewController" id="q6l-rC-KgP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mDW-Gq-hpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-405"/>
         </scene>
     </scenes>
 </document>
