@@ -20,10 +20,38 @@
             </objects>
             <point key="canvasLocation" x="-1069" y="81"/>
         </scene>
-        <!--Item 2-->
+        <!--HomeViewController-->
+        <scene sceneID="ba4-ST-BWI">
+            <objects>
+                <tableViewController id="Ghk-zK-cmm" userLabel="HomeViewController" customClass="HomeTableViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dVa-CR-66G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2XA-e9-vK8">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2XA-e9-vK8" id="FHb-WC-SWK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ghk-zK-cmm" id="NOJ-Hh-n7O"/>
+                            <outlet property="delegate" destination="Ghk-zK-cmm" id="Jxy-CK-25U"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Home" id="r1c-sA-qiv" userLabel="Home"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zXX-l6-Z48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-405"/>
+        </scene>
+        <!--FiltreViewController-->
         <scene sceneID="daK-ct-ZK4">
             <objects>
-                <viewController id="vtX-Oi-N2h" sceneMemberID="viewController">
+                <viewController id="vtX-Oi-N2h" userLabel="FiltreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HsE-Rp-hAD"/>
                         <viewControllerLayoutGuide type="bottom" id="CDj-4A-i7K"/>
@@ -33,16 +61,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.21330440080016677" blue="0.21417101171469988" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="5lk-bf-cdq"/>
+                    <tabBarItem key="tabBarItem" title="Filter" id="5lk-bf-cdq" userLabel="Filter"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOJ-ZV-CSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="81"/>
+            <point key="canvasLocation" x="407" y="281"/>
         </scene>
-        <!--Item-->
+        <!--ReportViewController-->
         <scene sceneID="uR7-Zv-zhg">
             <objects>
-                <viewController id="cfS-pH-CAJ" sceneMemberID="viewController">
+                <viewController id="cfS-pH-CAJ" userLabel="ReportViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5dZ-3o-rNs"/>
                         <viewControllerLayoutGuide type="bottom" id="NR2-6K-o2F"/>
@@ -52,36 +80,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.42121103644495805" green="0.68736250883972994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0as-zW-XNu"/>
+                    <tabBarItem key="tabBarItem" title="Report" id="0as-zW-XNu" userLabel="Report"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-Em-HV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="750"/>
+            <point key="canvasLocation" x="-309" y="938"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="WsN-5U-el6">
-            <objects>
-                <viewController id="zuN-0f-MOd" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YxQ-KB-UFG"/>
-                        <viewControllerLayoutGuide type="bottom" id="YYp-sE-Ekr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oe0-Hw-QSt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.58880134873724876" green="1" blue="0.21950696102636136" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rPe-Vr-ZSI" userLabel="Item 3"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NKC-TW-iRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="407" y="-594"/>
-        </scene>
-        <!--View Controller-->
+        <!--TabBarController-->
         <scene sceneID="Dgg-wo-03u">
             <objects>
-                <tabBarController id="I13-p5-zDh" customClass="ViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="I13-p5-zDh" userLabel="TabBarController" customClass="TabBarViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="dor-qG-h6W"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="8FI-0d-dLr">
@@ -90,7 +99,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zuN-0f-MOd" kind="relationship" relationship="viewControllers" id="wxj-YC-y1T"/>
+                        <segue destination="Ghk-zK-cmm" kind="relationship" relationship="viewControllers" id="A6Z-iN-gnu"/>
                         <segue destination="vtX-Oi-N2h" kind="relationship" relationship="viewControllers" id="6ny-U4-gUP"/>
                         <segue destination="cfS-pH-CAJ" kind="relationship" relationship="viewControllers" id="1Xi-4j-tiE"/>
                     </connections>
