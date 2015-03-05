@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, LoginViewControllerDelegate {
+class ViewController: UITabBarController, LoginViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
