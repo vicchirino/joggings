@@ -52,8 +52,7 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
-    func createAlert(title: NSString, message: NSString) {
-        
+    func createAlert(title: NSString, message: NSString) {        
         var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
@@ -77,6 +76,13 @@ class SecondViewController: UIViewController {
         return true;
     }
 
+    
+    func dropKeyboard(){
+        usernameTextfield.resignFirstResponder()
+        passwordTextfield.resignFirstResponder()
+        repeatPasswordTextfield.resignFirstResponder()
+    }
+    
     
     //MARK: Parse
     func singnUp(username: NSString, password: NSString) {

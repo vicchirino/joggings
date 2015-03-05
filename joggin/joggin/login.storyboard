@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRW-Bj-jrE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.9592018549298289" blue="0.65388041444165235" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="joggin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-Vn-1n7" userLabel="title">
                                 <rect key="frame" x="56" y="70" width="488" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
@@ -66,13 +70,17 @@
                             <constraint firstItem="yJC-Vn-1n7" firstAttribute="top" secondItem="M8Q-GP-Zwc" secondAttribute="bottom" constant="50" id="AO0-pu-4ky"/>
                             <constraint firstItem="yJC-Vn-1n7" firstAttribute="leading" secondItem="aHs-ld-tRp" secondAttribute="leadingMargin" constant="40" id="Kk4-s4-wkB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ITo-89-jli" secondAttribute="trailing" constant="10" id="PED-Vu-YuP"/>
+                            <constraint firstAttribute="centerY" secondItem="wRW-Bj-jrE" secondAttribute="centerY" id="T9Y-Vp-TLY"/>
                             <constraint firstAttribute="centerX" secondItem="hDV-Ln-F71" secondAttribute="centerX" multiplier="0.75" id="WbG-Dk-Crz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hDV-Ln-F71" secondAttribute="trailing" constant="70" id="hXW-6w-Zol"/>
+                            <constraint firstAttribute="width" secondItem="wRW-Bj-jrE" secondAttribute="width" id="isb-NB-MKa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yJC-Vn-1n7" secondAttribute="trailing" constant="40" id="kKM-s2-wiE"/>
                             <constraint firstAttribute="centerX" secondItem="d0K-J6-LOH" secondAttribute="centerX" multiplier="1.75" id="n0p-pR-FFj"/>
                             <constraint firstItem="ITo-89-jli" firstAttribute="top" secondItem="d0K-J6-LOH" secondAttribute="bottom" constant="40" id="n9B-WG-9q1"/>
                             <constraint firstItem="d0K-J6-LOH" firstAttribute="top" secondItem="yJC-Vn-1n7" secondAttribute="bottom" constant="50" id="uGQ-Hc-LG6"/>
+                            <constraint firstAttribute="height" secondItem="wRW-Bj-jrE" secondAttribute="height" id="uVc-gq-dMH"/>
                             <constraint firstItem="hDV-Ln-F71" firstAttribute="width" secondItem="d0K-J6-LOH" secondAttribute="width" id="wsY-2T-x1W"/>
+                            <constraint firstAttribute="centerX" secondItem="wRW-Bj-jrE" secondAttribute="centerX" id="zCr-2z-pJs"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -82,6 +90,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="8WD-f7-3HV"/>
+                                <exclude reference="uVc-gq-dMH"/>
                                 <exclude reference="hXW-6w-Zol"/>
                             </mask>
                         </variation>
@@ -105,14 +114,52 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5er-qn-g8v" userLabel="Username">
                                 <rect key="frame" x="21" y="30" width="558" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="6kz-Hr-cVA" userLabel="Username Label">
+                                        <rect key="frame" x="10" y="15" width="79" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-tL-edG" userLabel="Username TextField">
+                                        <rect key="frame" x="94" y="15" width="444" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zhy-tL-edG" secondAttribute="trailing" constant="20" id="0sR-dp-J0Q"/>
+                                    <constraint firstItem="6kz-Hr-cVA" firstAttribute="leading" secondItem="5er-qn-g8v" secondAttribute="leading" constant="10" id="41U-tf-WzT"/>
+                                    <constraint firstItem="6kz-Hr-cVA" firstAttribute="centerY" secondItem="zhy-tL-edG" secondAttribute="centerY" id="Brc-A6-XEM"/>
+                                    <constraint firstAttribute="centerY" secondItem="6kz-Hr-cVA" secondAttribute="centerY" id="NJ3-Bg-pdZ"/>
                                     <constraint firstAttribute="height" constant="50" id="bCL-uO-5yk"/>
+                                    <constraint firstItem="zhy-tL-edG" firstAttribute="leading" secondItem="6kz-Hr-cVA" secondAttribute="trailing" constant="5" id="i0c-xj-dx4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kht-hY-k1x" userLabel="Password">
                                 <rect key="frame" x="21" y="100" width="558" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="6yV-4r-Ahl" userLabel="Password Label">
+                                        <rect key="frame" x="10" y="15" width="77" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h5R-3J-948" userLabel="Password TextField">
+                                        <rect key="frame" x="92" y="15" width="446" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6yV-4r-Ahl" firstAttribute="leading" secondItem="Kht-hY-k1x" secondAttribute="leading" constant="10" id="2PZ-ND-0Ed"/>
+                                    <constraint firstAttribute="centerY" secondItem="6yV-4r-Ahl" secondAttribute="centerY" id="Ia1-8W-c85"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5R-3J-948" secondAttribute="trailing" constant="20" id="aC8-dT-3sp"/>
+                                    <constraint firstItem="h5R-3J-948" firstAttribute="leading" secondItem="6yV-4r-Ahl" secondAttribute="trailing" constant="5" id="rzj-E6-tNN"/>
+                                    <constraint firstItem="6yV-4r-Ahl" firstAttribute="centerY" secondItem="h5R-3J-948" secondAttribute="centerY" id="zMl-MB-5bh"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOL-a1-uit" userLabel="Login Button">
                                 <rect key="frame" x="277" y="545" width="47" height="50"/>
@@ -121,6 +168,9 @@
                                     <color key="titleColor" red="0.30714111669999999" green="0.34904158769999999" blue="0.63814484130000004" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="8qz-4I-5N4" eventType="touchUpInside" id="Och-vi-fG5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -136,6 +186,10 @@
                             <constraint firstItem="5er-qn-g8v" firstAttribute="height" secondItem="Kht-hY-k1x" secondAttribute="height" id="s1L-uq-srR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="h5R-3J-948" id="nfV-S7-WDR"/>
+                        <outlet property="usernameTextField" destination="zhy-tL-edG" id="MHO-gm-u9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLO-Mn-x78" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,14 +210,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsn-cM-y5b" userLabel="Username">
                                 <rect key="frame" x="21" y="20" width="558" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iW8-sR-8RX" userLabel="Username Label">
-                                        <rect key="frame" x="10" y="14" width="88" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iW8-sR-8RX" userLabel="Username Label">
+                                        <rect key="frame" x="10" y="15" width="79" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="right" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8vS-Fe-0oZ" userLabel="Username Textfield">
-                                        <rect key="frame" x="103" y="15" width="435" height="20"/>
+                                        <rect key="frame" x="94" y="15" width="444" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                                         <connections>
@@ -185,13 +239,13 @@
                                 <rect key="frame" x="21" y="80" width="558" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="19y-eb-kux" userLabel="Password Label">
-                                        <rect key="frame" x="10" y="14" width="85" height="22"/>
+                                        <rect key="frame" x="10" y="15" width="77" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="right" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1hp-jq-jtt" userLabel="Password Textfield">
-                                        <rect key="frame" x="100" y="15" width="438" height="20"/>
+                                        <rect key="frame" x="92" y="15" width="446" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" secureTextEntry="YES"/>
                                         <connections>
@@ -212,7 +266,7 @@
                                 <rect key="frame" x="21" y="140" width="558" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIy-G2-cXz" userLabel="Repeat Password Label">
-                                        <rect key="frame" x="10" y="14" width="150" height="22"/>
+                                        <rect key="frame" x="10" y="15" width="150" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="igb-kH-yCZ"/>
                                         </constraints>

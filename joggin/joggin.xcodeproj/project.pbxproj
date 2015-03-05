@@ -14,6 +14,7 @@
 		7F0B35F61AA771CE00FC00EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B35F51AA771CE00FC00EF /* Images.xcassets */; };
 		7F0B35F91AA771CE00FC00EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B35F71AA771CE00FC00EF /* LaunchScreen.xib */; };
 		7F0B36051AA771CE00FC00EF /* jogginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B36041AA771CE00FC00EF /* jogginTests.swift */; };
+		7F2B08F11AA8B001006D470E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B08F01AA8B001006D470E /* FirstViewController.swift */; };
 		7F4AF5DB1AA786710056D1C6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AF5D61AA786710056D1C6 /* Bolts.framework */; };
 		7F4AF5DC1AA786710056D1C6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AF5D71AA786710056D1C6 /* Parse.framework */; };
 		7F4AF5DD1AA786710056D1C6 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AF5D81AA786710056D1C6 /* ParseCrashReporting.framework */; };
@@ -36,7 +37,6 @@
 		7F4AF6021AA78D250056D1C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4AF6011AA78D250056D1C6 /* LoginViewController.swift */; };
 		7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B59D71AA8A91200D97024 /* PZUILoader.m */; };
 		7F8283CC1AA797B7009B45D4 /* InfoLoginContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */; };
-		7F8283CE1AA798A9009B45D4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CD1AA798A9009B45D4 /* FirstViewController.swift */; };
 		7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */; };
 		7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +63,7 @@
 		7F0B35FE1AA771CE00FC00EF /* jogginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jogginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0B36031AA771CE00FC00EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F0B36041AA771CE00FC00EF /* jogginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jogginTests.swift; sourceTree = "<group>"; };
+		7F2B08F01AA8B001006D470E /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7F4AF5D61AA786710056D1C6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7F4AF5D71AA786710056D1C6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7F4AF5D81AA786710056D1C6 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		7F5B59D61AA8A91200D97024 /* PZUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZUILoader.h; sourceTree = "<group>"; };
 		7F5B59D71AA8A91200D97024 /* PZUILoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZUILoader.m; sourceTree = "<group>"; };
 		7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoLoginContainerViewController.swift; sourceTree = "<group>"; };
-		7F8283CD1AA798A9009B45D4 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,7 +220,7 @@
 				7F4AF5FF1AA78AC90056D1C6 /* login.storyboard */,
 				7F4AF6011AA78D250056D1C6 /* LoginViewController.swift */,
 				7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */,
-				7F8283CD1AA798A9009B45D4 /* FirstViewController.swift */,
+				7F2B08F01AA8B001006D470E /* FirstViewController.swift */,
 				7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */,
 				7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */,
 			);
@@ -337,11 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2B08F11AA8B001006D470E /* FirstViewController.swift in Sources */,
 				7F4AF6021AA78D250056D1C6 /* LoginViewController.swift in Sources */,
 				7F0B35F11AA771CE00FC00EF /* ViewController.swift in Sources */,
 				7F0B35EC1AA771CE00FC00EF /* AppDelegate.swift in Sources */,
 				7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */,
-				7F8283CE1AA798A9009B45D4 /* FirstViewController.swift in Sources */,
 				7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */,
 				7F0B35EF1AA771CE00FC00EF /* joggin.xcdatamodeld in Sources */,
 				7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */,
