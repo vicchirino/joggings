@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    var delegate: FirstViewControllerDelegate?
+    var delegate: FirstViewControllerDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -81,10 +81,10 @@ class FirstViewController: UIViewController {
             PZUILoader.sharedLoader().hide()
             
             if user != nil {
-                NSLog("hola")
-//                self.enterApplication()
-//                self.dismissViewControllerAnimated(true, completion: nil)
-                self.delegate?.finishLogin(user)
+                
+                let loginViewController = self.parentViewController?.parentViewController as LoginViewController!
+                self.delegate = loginViewController!
+                self.delegate.finishLogin(user)
                 
             } else {
                 var info = error.userInfo!

@@ -47,8 +47,8 @@ class LoginViewController: UIViewController, FirstViewControllerDelegate, Second
     //MARK FirstViewControllerDelegate
     
     func finishLogin(user: PFUser) {
-        NSLog("PASO")
-        
+        self.delegate?.startApplicationWithUser(user)
+        self.dismissViewControllerAnimated(true, completion: nil)        
     }
     
     //MARK SecondViewControllerDelegate

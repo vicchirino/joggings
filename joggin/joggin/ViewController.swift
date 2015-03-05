@@ -30,7 +30,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate {
             controller.delegate = self
             self.presentViewController(controller, animated: true, completion: nil)
         }
-       
+    
     }
 
     override func didReceiveMemoryWarning() {

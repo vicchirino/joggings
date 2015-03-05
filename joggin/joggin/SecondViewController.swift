@@ -104,8 +104,6 @@ class SecondViewController: UIViewController {
             PZUILoader.sharedLoader().hide()
             
             if error == nil {
-//                self.enterApplication()
-//                self.dismissViewControllerAnimated(true, completion: nil)
                 self.delegate?.finishCreate(user)
 
             } else {
