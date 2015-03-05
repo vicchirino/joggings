@@ -8,11 +8,16 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol LoginViewControllerDelegate{
+    func startApplicationWithUser(user: PFUser)
+}
+
+class LoginViewController: UIViewController, FirstViewControllerDelegate, SecondViewControllerDelegate {
     
     var containerViewController: InfoLoginContainerViewController!
     var currentTag: NSInteger!
-
+    var delegate: LoginViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,13 +25,7 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-//    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//    {
-//    if ([segue.identifier isEqualToString:@"embedContainer"]) {
-//    self.containerViewController = segue.destinationViewController;
-//    }
-//    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "embedContainer"){
@@ -44,6 +43,21 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK FirstViewControllerDelegate
+    
+    func finishLogin(user: PFUser) {
+        NSLog("PASO")
+        
+    }
+    
+    //MARK SecondViewControllerDelegate
+    
+    func finishCreate(user: PFUser) {
+        self.delegate?.startApplicationWithUser(user)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     
 //    @IBAction func change(sender: AnyObject) {
 //        containerViewController.swapViewControllers()

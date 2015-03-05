@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LoginViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,11 +20,17 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-       
-        var storyboard = UIStoryboard(name: "login", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as UIViewController
         
-        self.presentViewController(controller, animated: true, completion: nil)
+        var currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            
+        } else {
+            var storyboard = UIStoryboard(name: "login", bundle: nil)
+            var controller = storyboard.instantiateViewControllerWithIdentifier("InitialViewController") as LoginViewController            
+            controller.delegate = self
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +38,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    // Mark LoginViewControllerDelegate
+    
+    func startApplicationWithUser(user: PFUser){
+        NSLog("ENTRO EN LA APLICACIÓN")
+    }
+    
 }
 

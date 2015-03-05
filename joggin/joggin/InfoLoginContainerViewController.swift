@@ -18,6 +18,7 @@ class InfoLoginContainerViewController: UIViewController {
     let SegueIdentifierFirst = "embedFirst"
     let SegueIdentifierSecond = "embedSecond"
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +33,15 @@ class InfoLoginContainerViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == SegueIdentifierFirst){
-                self.firstViewController = segue.destinationViewController as FirstViewController
+            self.firstViewController = segue.destinationViewController as FirstViewController
+            var parentViewController = self.parentViewController as? LoginViewController
+            self.firstViewController.delegate = parentViewController
         }
         
         if(segue.identifier == SegueIdentifierSecond){
             self.secondViewController = segue.destinationViewController as SecondViewController
+            var parentViewController = self.parentViewController as? LoginViewController
+            self.secondViewController.delegate = parentViewController
         }
         
         if(segue.identifier == SegueIdentifierFirst){

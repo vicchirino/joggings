@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol SecondViewControllerDelegate {
+    func finishCreate(user: PFUser)
+}
+
 class SecondViewController: UIViewController {
    
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var repeatPasswordTextfield: UITextField!
-    
+    var delegate: SecondViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -100,7 +105,9 @@ class SecondViewController: UIViewController {
             
             if error == nil {
 //                self.enterApplication()
-                
+//                self.dismissViewControllerAnimated(true, completion: nil)
+                self.delegate?.finishCreate(user)
+
             } else {
                 var info = error.userInfo!
                 let errorString = info["error"] as NSString

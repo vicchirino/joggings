@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol FirstViewControllerDelegate {
+    func finishLogin(user: PFUser)
+}
+
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    var delegate: FirstViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -79,6 +83,8 @@ class FirstViewController: UIViewController {
             if user != nil {
                 NSLog("hola")
 //                self.enterApplication()
+//                self.dismissViewControllerAnimated(true, completion: nil)
+                self.delegate?.finishLogin(user)
                 
             } else {
                 var info = error.userInfo!
