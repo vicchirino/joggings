@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+var kNotificationFetchInformation = "kNotificationFetchInformation"
+var kNotificationDoneButtonPicker = "kNotificationDoneButtonPicker"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

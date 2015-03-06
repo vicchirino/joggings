@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomPickerView" customModule="joggin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rQR-g3-fXY">
+                    <rect key="frame" x="0.0" y="162" width="600" height="216"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <date key="date" timeIntervalSinceReferenceDate="447355868.22096598">
+                        <!--2015-03-06 17:31:08 +0000-->
+                    </date>
+                </datePicker>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-li-7sZ">
+                    <rect key="frame" x="0.0" y="550" width="600" height="40"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" red="0.37818824890000002" green="0.37716165010000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="done:" destination="iN0-l3-epB" eventType="touchUpInside" id="NPS-9C-RYa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95556382275132279" green="0.95556382275132279" blue="0.95556382275132279" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9Pw-li-7sZ" secondAttribute="bottom" constant="10" id="5or-5o-VCC"/>
+                <constraint firstItem="9Pw-li-7sZ" firstAttribute="top" secondItem="rQR-g3-fXY" secondAttribute="bottom" constant="10" id="9zW-xS-CKE"/>
+                <constraint firstAttribute="centerX" secondItem="rQR-g3-fXY" secondAttribute="centerX" id="Iuw-rx-1b3"/>
+                <constraint firstItem="rQR-g3-fXY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="XzI-VC-i4q"/>
+                <constraint firstItem="rQR-g3-fXY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hlg-Ee-Ug4"/>
+                <constraint firstAttribute="trailing" secondItem="rQR-g3-fXY" secondAttribute="trailing" id="oUG-we-k4D"/>
+                <constraint firstAttribute="trailing" secondItem="9Pw-li-7sZ" secondAttribute="trailing" id="rYX-2B-v4d"/>
+                <constraint firstItem="9Pw-li-7sZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xF0-Sv-6FO"/>
+            </constraints>
+            <connections>
+                <outlet property="doneButton" destination="9Pw-li-7sZ" id="B14-nW-GGS"/>
+                <outlet property="picker" destination="rQR-g3-fXY" id="8nO-CR-Q1T"/>
+            </connections>
+        </view>
+    </objects>
+</document>

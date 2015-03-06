@@ -44,6 +44,10 @@
 		7FC6B2BD1AA9E968000F253B /* Jogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2BC1AA9E968000F253B /* Jogging.swift */; };
 		7FC6B2C21AA9EEEE000F253B /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C11AA9EEEE000F253B /* EmptyStateView.swift */; };
 		7FC6B2C41AA9EF10000F253B /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C31AA9EF10000F253B /* EmptyStateView.xib */; };
+		7FC6B2C71AAA1BB7000F253B /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C61AAA1BB7000F253B /* CustomPickerView.swift */; };
+		7FC6B2C91AAA1BC9000F253B /* CustomPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C81AAA1BC9000F253B /* CustomPickerView.xib */; };
+		7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2CA1AAA1D04000F253B /* AddJoggingTableViewController.swift */; };
+		7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */; };
 		B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */; };
 		B574D2A11AA957BE0056E624 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -102,6 +106,10 @@
 		7FC6B2BC1AA9E968000F253B /* Jogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogging.swift; sourceTree = "<group>"; };
 		7FC6B2C11AA9EEEE000F253B /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		7FC6B2C31AA9EF10000F253B /* EmptyStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
+		7FC6B2C61AAA1BB7000F253B /* CustomPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
+		7FC6B2C81AAA1BC9000F253B /* CustomPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPickerView.xib; sourceTree = "<group>"; };
+		7FC6B2CA1AAA1D04000F253B /* AddJoggingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJoggingTableViewController.swift; sourceTree = "<group>"; };
+		7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +172,7 @@
 		7F0B35E81AA771CE00FC00EF /* joggin */ = {
 			isa = PBXGroup;
 			children = (
+				7FC6B2C51AAA1B85000F253B /* Add Jogging */,
 				7FC6B2BB1AA9E937000F253B /* PFObjects */,
 				B574D29D1AA957860056E624 /* home */,
 				7F5B59D51AA8A90400D97024 /* loader */,
@@ -261,6 +270,17 @@
 			name = PFObjects;
 			sourceTree = "<group>";
 		};
+		7FC6B2C51AAA1B85000F253B /* Add Jogging */ = {
+			isa = PBXGroup;
+			children = (
+				7FC6B2C61AAA1BB7000F253B /* CustomPickerView.swift */,
+				7FC6B2C81AAA1BC9000F253B /* CustomPickerView.xib */,
+				7FC6B2CA1AAA1D04000F253B /* AddJoggingTableViewController.swift */,
+				7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */,
+			);
+			name = "Add Jogging";
+			sourceTree = "<group>";
+		};
 		B574D29D1AA957860056E624 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC6B2C41AA9EF10000F253B /* EmptyStateView.xib in Resources */,
+				7FC6B2C91AAA1BC9000F253B /* CustomPickerView.xib in Resources */,
 				7F4AF6001AA78AC90056D1C6 /* login.storyboard in Resources */,
 				7F0B35F41AA771CE00FC00EF /* Main.storyboard in Resources */,
 				7F0B35F91AA771CE00FC00EF /* LaunchScreen.xib in Resources */,
@@ -382,10 +403,13 @@
 				7F0B35F11AA771CE00FC00EF /* ViewController.swift in Sources */,
 				7F0B35EC1AA771CE00FC00EF /* AppDelegate.swift in Sources */,
 				7F2B08F31AA8EBB6006D470E /* HomeTableViewController.swift in Sources */,
+				7FC6B2C71AAA1BB7000F253B /* CustomPickerView.swift in Sources */,
 				7FC6B2C21AA9EEEE000F253B /* EmptyStateView.swift in Sources */,
 				B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */,
+				7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */,
 				7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */,
 				7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */,
+				7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */,
 				7F0B35EF1AA771CE00FC00EF /* joggin.xcdatamodeld in Sources */,
 				7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */,
 				7FC6B2BD1AA9E968000F253B /* Jogging.swift in Sources */,

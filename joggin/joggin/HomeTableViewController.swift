@@ -17,6 +17,8 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.joggingsArray = NSMutableArray()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"fetchInformation", name: kNotificationFetchInformation, object: nil);
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,10 +28,6 @@ class HomeTableViewController: UITableViewController {
         
         self.tableView.registerNib(UINib(nibName:"HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
         
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         self.user = PFUser.currentUser()
         
         if (user != nil){
@@ -38,6 +36,18 @@ class HomeTableViewController: UITableViewController {
         }else{
             NSLog("No hay usuario")
         }
+        
+    }
+    
+    func fetchInformation(){
+        self.user = PFUser.currentUser()
+        self.title = user.username
+        self.getUserJogging()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
     }
     func getUserJogging() {
         
@@ -169,14 +179,15 @@ class HomeTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if segue.identifier == "addJoggingSegue" {
+            let destinationVC = segue.destinationViewController as AddJoggingTableViewController
+        }
     }
-    */
 
 }

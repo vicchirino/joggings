@@ -47,7 +47,7 @@ class HomeTableViewCell: UITableViewCell {
     
     func setDate(date: NSDate){
         var dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.dateFormat = "MMM d, yyyy"
         var dayString: NSString = dateFormatter.stringFromDate(date)
         self.dateLabel.text = dayString
     }

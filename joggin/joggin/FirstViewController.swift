@@ -24,6 +24,10 @@ class FirstViewController: UIViewController {
     }
 
     @IBAction func login(sender: AnyObject) {
+        if !self.checkParameters(){
+            self.createAlert("Oops we encountered an error", message: "All of the fields must be filled")
+            return
+        }
         self.login(usernameTextField.text, password: passwordTextField.text)
     }
     

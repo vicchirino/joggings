@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I13-p5-zDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I13-p5-zDh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--HomeViewController-->
@@ -18,13 +19,67 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RVt-Z8-F8e">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SK8-ii-m5H"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="SK8-ii-m5H">
+                            <connections>
+                                <segue destination="xc1-2O-wjG" kind="show" identifier="addJoggingSegue" id="sQn-C0-Fey"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXX-l6-Z48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1219" y="-405"/>
+        </scene>
+        <!--AddJoggingTableViewController-->
+        <scene sceneID="G1N-cb-Icx">
+            <objects>
+                <tableViewController id="xc1-2O-wjG" userLabel="AddJoggingTableViewController" customClass="AddJoggingTableViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="WIL-pq-qVd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EntryCell" id="g2q-dB-VlV" customClass="EntryTableViewCell" customModule="joggin" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g2q-dB-VlV" id="BkK-3W-MPb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-Ms-A54">
+                                            <rect key="frame" x="18" y="26" width="44" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Info" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NMc-US-MtB">
+                                            <rect key="frame" x="541" y="27" width="41" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="NMc-US-MtB" secondAttribute="trailing" constant="10" id="KY5-sZ-vg2"/>
+                                        <constraint firstAttribute="centerY" secondItem="kvu-Ms-A54" secondAttribute="centerY" id="b2d-5A-l85"/>
+                                        <constraint firstItem="kvu-Ms-A54" firstAttribute="leading" secondItem="BkK-3W-MPb" secondAttribute="leadingMargin" constant="10" id="pg7-dX-j5V"/>
+                                        <constraint firstItem="kvu-Ms-A54" firstAttribute="centerY" secondItem="NMc-US-MtB" secondAttribute="centerY" id="zyR-fF-VnL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infoLabel" destination="kvu-Ms-A54" id="fFi-aa-iAG"/>
+                                    <outlet property="infoTextField" destination="NMc-US-MtB" id="Ssk-n9-dUu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="xc1-2O-wjG" id="vmE-t6-uVy"/>
+                            <outlet property="delegate" destination="xc1-2O-wjG" id="Q3j-LZ-z8o"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-y9-4Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="-1146"/>
         </scene>
         <!--FiltreViewController-->
         <scene sceneID="daK-ct-ZK4">

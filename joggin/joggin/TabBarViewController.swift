@@ -43,6 +43,7 @@ class TabBarViewController: UITabBarController,LoginViewControllerDelegate {
     
     func startApplicationWithUser(user: PFUser){
         NSLog("ENTRO EN LA APLICACIÓN")
+        NSNotificationCenter.defaultCenter().postNotificationName(kNotificationFetchInformation, object: nil);
     }
 
 }
