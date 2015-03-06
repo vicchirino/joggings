@@ -10,11 +10,14 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
-    var user:PFUser!
+    var user :PFUser!
+    var joggingsArray :NSMutableArray!
+    var emptyStateView: EmptyStateView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.joggingsArray = NSMutableArray()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -30,13 +33,47 @@ class HomeTableViewController: UITableViewController {
         self.user = PFUser.currentUser()
         
         if (user != nil){
-            NSLog("%@", user.username)
-            self.title = "victor"
+            self.title = user.username
+            self.getUserJogging()
         }else{
             NSLog("No hay usuario")
         }
     }
-
+    func getUserJogging() {
+        
+        var query = PFQuery(className:"Jogging")
+        query.whereKey("userID", equalTo: PFUser.currentUser())
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+//            self.activityIndicator.stopAnimating()
+            
+            if error == nil {
+                // The find succeeded.
+                NSLog("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                for object in objects {
+                    NSLog("%@", object.objectId)
+                    let jogging: Jogging = object as Jogging
+                    self.joggingsArray.addObject(jogging)
+                }
+                self.joggingsArray.count > 0 ? self.tableView.reloadData() : self.addEmptyState()
+            } else {
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo!)
+                
+            }
+        }
+    }
+    func addEmptyState(){        
+        self.emptyStateView = EmptyStateView(frame: CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height))
+        self.emptyStateView.alpha = 0.0
+        self.tableView.addSubview(self.emptyStateView)
+        UIView.animateWithDuration(0.5, delay: 0.0, options: nil, animations: {
+            self.emptyStateView.alpha = 1.0
+            }, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -49,8 +86,7 @@ class HomeTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return 2
+        return self.joggingsArray.count
     }
 
     
@@ -59,8 +95,11 @@ class HomeTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.setDistance("100")
-
+        let jogging = self.joggingsArray[indexPath.row] as Jogging
+        
+        cell.setDistance(jogging.distanceKm)
+        cell.setDate(jogging.date)
+        cell.setTime(jogging.minutes)
         return cell
     }
     

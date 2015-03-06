@@ -31,12 +31,25 @@ class HomeTableViewCell: UITableViewCell {
         distanceLabel.text = NSString(format: "%@ km", distance)
     }
     
-    func setTime(time: NSString){
-    
+    func setTime(time: NSNumber){
+        
+        var hours = floor(time.floatValue/60)
+        var minutes = time.floatValue - (hours * 60)
+        var timeString = ""
+        
+        if(hours > 0){
+            timeString = NSString(format: "%.f h and %.f m", hours,minutes)
+        }else{
+            timeString = NSString(format: "%.f minutes",minutes)
+        }
+        self.timeLabel.text = timeString        
     }
     
-    func setDate(time: NSString){
-        
+    func setDate(date: NSDate){
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        var dayString: NSString = dateFormatter.stringFromDate(date)
+        self.dateLabel.text = dayString
     }
     
 }
