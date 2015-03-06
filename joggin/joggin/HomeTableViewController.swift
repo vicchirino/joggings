@@ -73,6 +73,11 @@ class HomeTableViewController: UITableViewController {
             self.emptyStateView.alpha = 1.0
             }, completion: nil)
     }
+    func removeEmptyStateView(){
+        if self.emptyStateView != nil {
+            self.emptyStateView.removeFromSuperview()
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,6 +94,27 @@ class HomeTableViewController: UITableViewController {
         return self.joggingsArray.count
     }
 
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+            NSLog("BORRA")
+            var jogging = self.joggingsArray[indexPath.row] as Jogging
+            self.joggingsArray.removeObject(jogging)
+            self.tableView.beginUpdates()
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            self.tableView.endUpdates()
+            jogging.deleteInBackgroundWithBlock {
+                (success: Bool, error: NSError!) -> Void in
+                if (success) {
+                }
+            }
+            self.joggingsArray.count > 0 ? self.removeEmptyStateView() : self.addEmptyState()
+
+        }
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as HomeTableViewCell
