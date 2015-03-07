@@ -13,6 +13,8 @@ class Jogging: PFObject, PFSubclassing {
     @NSManaged var date: NSDate!
     @NSManaged var distanceKm: NSString!
     @NSManaged var minutes: NSNumber!
+    @NSManaged var userID: PFUser!
+
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;

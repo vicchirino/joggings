@@ -49,13 +49,104 @@ class AddJoggingTableViewController: UITableViewController {
         
         if (checkParameters()){
             //CREO UN NUEVO JOGGIN
-            self.navigationController?.popViewControllerAnimated(true)
+            
+            var newTextEntry = NSMutableArray()
+
+            for index in 0...2 {
+                let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as EntryTableViewCell
+                newTextEntry.addObject(cell.infoTextField.text)
+            }
+            (self.jogging != nil) ? self.editJogging(newTextEntry) : self.addJogging(newTextEntry)
+            
         }else{
             self.createAlert("Oops we encountered an error", message: "All of the fields must be filled")
         }
         
-        
     }
+    
+    func addJogging(array: NSArray) {
+        
+        PZUILoader.sharedLoader().show()
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        
+        
+        self.jogging = Jogging()
+
+        self.jogging.distanceKm = array[0] as NSString
+        self.jogging.minutes = NSNumber(integer: array[1].integerValue)
+        self.jogging.date = dateFormatter.dateFromString(array[2] as NSString)
+        self.jogging.userID = PFUser.currentUser()
+        
+        self.jogging.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            
+            PZUILoader.sharedLoader().hide()
+            
+            if (success) {
+                var user = PFUser.currentUser()
+                var relation = user.relationForKey("joggings")
+                
+                relation.addObject(self.jogging)
+                
+                user.saveInBackgroundWithBlock {(success: Bool, error: NSError!) -> Void in}
+                var homeViewController = self.navigationController?.viewControllers[0] as HomeTableViewController
+                homeViewController.joggingsArray.addObject(self.jogging)
+                self.navigationController?.popViewControllerAnimated(true)
+            } else {
+                var info = error.userInfo!
+                let errorString = info["error"] as NSString
+                self.createAlert("Error", message: errorString)
+            }
+        }
+    }
+    
+    func editJogging(array: NSArray){
+        
+//        PZUILoader.sharedLoader().show()
+//        
+//        var query = PFQuery(className:"Meal")
+//        query.getObjectInBackgroundWithId(meal.objectID) {
+//            (mealObject: PFObject!, error: NSError!) -> Void in
+//            
+//            PZUILoader.sharedLoader().hide()
+//            
+//            if error != nil {
+//                
+//                var info = error.userInfo!
+//                let errorString = info["error"] as NSString
+//                self.createAlert("Error", message: errorString)
+//                
+//            } else {
+//                mealObject["name"] = array[0] as NSString
+//                mealObject["calories"] = array[1].integerValue
+//                mealObject["date"] = self.dateFormatter.dateFromString(array[2] as NSString)
+//                
+//                //Get Exact time for the filter
+//                var timeRawString = array[2] as NSString
+//                timeRawString = timeRawString.stringByReplacingOccurrencesOfString(":", withString: "")
+//                var timeString = timeRawString.substringFromIndex(timeRawString.length - 4)
+//                
+//                mealObject["time"] = timeString.toInt()
+//                
+//                mealObject.saveInBackgroundWithBlock {
+//                    (success: Bool, error: NSError!) -> Void in
+//                    if (success) {
+//                        self.customView.removeFromSuperview()
+//                        let editedMeal = Meal(object: mealObject)
+//                        self.delegate.mealEdited(editedMeal)
+//                        self.navigationController?.popViewControllerAnimated(true)
+//                    } else {
+//                        var info = error.userInfo!
+//                        let errorString = info["error"] as NSString
+//                        self.createAlert("Error", message: errorString)
+//                    }
+//                }
+//            }
+//        }
+    }
+    
     func createAlert(title: NSString, message: NSString) {
         var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))

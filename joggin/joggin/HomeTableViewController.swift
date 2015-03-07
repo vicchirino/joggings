@@ -47,8 +47,10 @@ class HomeTableViewController: UITableViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.tableView.reloadData()
 
     }
+    
     func getUserJogging() {
         
         var query = PFQuery(className:"Jogging")
