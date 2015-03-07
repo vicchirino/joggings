@@ -13,8 +13,19 @@ let reuseIdentifier = "EntryCell"
 class AddJoggingTableViewController: UITableViewController {
 
     var customPickerView:CustomPickerView!
-    var jogging: Jogging!
+    var jogging: Jogging! {
+        didSet {
+            self.distanceKm = jogging.distanceKm
+            self.minutes = NSString(format: "%d", jogging.minutes.integerValue)
+            var dateFormatter = NSDateFormatter()
+            self.date = dateFormatter.stringFromDate(jogging.date)
+            self.tableView.reloadData()
+        }
+    }
     var footerView: UIView!
+    var distanceKm: NSString!
+    var date: NSString!
+    var minutes: NSString!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +41,10 @@ class AddJoggingTableViewController: UITableViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"pressDoneButton:", name: kNotificationDoneButtonPicker, object: nil);
         
+        self.distanceKm = ""
+        self.date = ""
+        self.minutes = ""
+        
         self.footerView = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 300))
         self.footerView.backgroundColor = UIColor.whiteColor()
         
@@ -43,15 +58,25 @@ class AddJoggingTableViewController: UITableViewController {
         
         self.tableView.tableFooterView = self.footerView
     }
+    
+//    func setJogging(jogging: Jogging!){
+//        self.distanceKm = jogging.distanceKm
+//        self.minutes = NSString(format: "%d", jogging.minutes.integerValue)
+//        var dateFormatter = NSDateFormatter()
+//        self.date = dateFormatter.stringFromDate(jogging.date)
+//        self.tableView.reloadData()
+//    }
+    
+    func setDistance(distance: NSString, timeSpent:NSNumber, inDate:NSDate){
+
+    }
 
     func addPressed(sender: UIButton){
         NSLog("CREAR JOGGING")
         
-        if (checkParameters()){
-            //CREO UN NUEVO JOGGIN
-            
-            var newTextEntry = NSMutableArray()
+        var newTextEntry = NSMutableArray()
 
+        if (checkParameters()){
             for index in 0...2 {
                 let cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as EntryTableViewCell
                 newTextEntry.addObject(cell.infoTextField.text)
@@ -70,7 +95,6 @@ class AddJoggingTableViewController: UITableViewController {
         
         var dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
-        
         
         self.jogging = Jogging()
 
@@ -104,47 +128,35 @@ class AddJoggingTableViewController: UITableViewController {
     
     func editJogging(array: NSArray){
         
-//        PZUILoader.sharedLoader().show()
-//        
-//        var query = PFQuery(className:"Meal")
-//        query.getObjectInBackgroundWithId(meal.objectID) {
-//            (mealObject: PFObject!, error: NSError!) -> Void in
-//            
-//            PZUILoader.sharedLoader().hide()
-//            
-//            if error != nil {
-//                
-//                var info = error.userInfo!
-//                let errorString = info["error"] as NSString
-//                self.createAlert("Error", message: errorString)
-//                
-//            } else {
-//                mealObject["name"] = array[0] as NSString
-//                mealObject["calories"] = array[1].integerValue
-//                mealObject["date"] = self.dateFormatter.dateFromString(array[2] as NSString)
-//                
-//                //Get Exact time for the filter
-//                var timeRawString = array[2] as NSString
-//                timeRawString = timeRawString.stringByReplacingOccurrencesOfString(":", withString: "")
-//                var timeString = timeRawString.substringFromIndex(timeRawString.length - 4)
-//                
-//                mealObject["time"] = timeString.toInt()
-//                
-//                mealObject.saveInBackgroundWithBlock {
-//                    (success: Bool, error: NSError!) -> Void in
-//                    if (success) {
-//                        self.customView.removeFromSuperview()
-//                        let editedMeal = Meal(object: mealObject)
-//                        self.delegate.mealEdited(editedMeal)
-//                        self.navigationController?.popViewControllerAnimated(true)
-//                    } else {
-//                        var info = error.userInfo!
-//                        let errorString = info["error"] as NSString
-//                        self.createAlert("Error", message: errorString)
-//                    }
-//                }
-//            }
-//        }
+        PZUILoader.sharedLoader().show()
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        
+        self.jogging.distanceKm = array[0] as NSString
+        self.jogging.minutes = NSNumber(integer: array[1].integerValue)
+        self.jogging.date = dateFormatter.dateFromString(array[2] as NSString)
+        
+        self.jogging.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError!) -> Void in
+            if (success) {
+                var homeViewController = self.navigationController?.viewControllers[0] as HomeTableViewController
+                var array = homeViewController.joggingsArray
+                
+                for joggingToReplace in array{
+                    if joggingToReplace.objectId == self.jogging.objectId{
+                        homeViewController.joggingsArray.removeObject(joggingToReplace)
+                        homeViewController.joggingsArray.addObject(self.jogging)
+                    }
+                }
+                self.navigationController?.popViewControllerAnimated(true)
+            } else {
+                var info = error.userInfo!
+                let errorString = info["error"] as NSString
+                self.createAlert("Error", message: errorString)
+            }
+            PZUILoader.sharedLoader().hide()
+        }
     }
     
     func createAlert(title: NSString, message: NSString) {
@@ -157,7 +169,6 @@ class AddJoggingTableViewController: UITableViewController {
     {
         
         let cell0 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EntryTableViewCell
-        
         let cell1 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0)) as EntryTableViewCell
         let cell2 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as EntryTableViewCell
         
@@ -187,7 +198,6 @@ class AddJoggingTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as EntryTableViewCell
         
         var cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier) as? EntryTableViewCell
         if cell == nil {
@@ -198,14 +208,26 @@ class AddJoggingTableViewController: UITableViewController {
         if indexPath.row == 0 {
             cell?.infoLabel.text = "Distance in Km:"
             cell?.infoTextField.placeholder = "Km"
+            if self.jogging != nil {
+                cell?.infoTextField.text = self.jogging.distanceKm
+            }
+            
         }
         if indexPath.row == 1 {
             cell?.infoLabel.text = "Time in Minutes:"
             cell?.infoTextField.placeholder = "Minutes"
+            if self.jogging != nil {
+                cell?.infoTextField.text = NSString(format: "%d", self.jogging.minutes.integerValue)
+            }
         }
         if indexPath.row == 2 {
             cell?.infoLabel.text = "Date:"
             cell?.infoTextField.placeholder = "Date"
+            if self.jogging != nil {
+                var dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "MMM d, yyyy"
+                cell?.infoTextField.text = dateFormatter.stringFromDate(self.jogging.date)
+            }
             cell?.infoTextField.inputView = self.customPickerView
         }
         // Configure the cell...

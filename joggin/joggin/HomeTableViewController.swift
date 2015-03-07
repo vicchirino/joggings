@@ -13,6 +13,7 @@ class HomeTableViewController: UITableViewController {
     var user :PFUser!
     var joggingsArray :NSMutableArray!
     var emptyStateView: EmptyStateView!
+    var joggingSelected: Jogging!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,20 +130,30 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HomeCell", forIndexPath: indexPath) as HomeTableViewCell
+
+        var cell = tableView.dequeueReusableCellWithIdentifier("HomeCell") as? HomeTableViewCell
+        if cell == nil {
+            cell = HomeTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "HomeCell")
+        }
+
 
         // Configure the cell...
-        
+        cell?.selectionStyle = UITableViewCellSelectionStyle.None
         let jogging = self.joggingsArray[indexPath.row] as Jogging
         
-        cell.setDistance(jogging.distanceKm)
-        cell.setDate(jogging.date)
-        cell.setTime(jogging.minutes)
-        return cell
+        cell?.setDistance(jogging.distanceKm)
+        cell?.setDate(jogging.date)
+        cell?.setTime(jogging.minutes)
+        return cell!
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 70;
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.joggingSelected = self.joggingsArray[indexPath.row] as Jogging
+        self.performSegueWithIdentifier("editJoggingSegue", sender: self)
     }
 
 
@@ -189,6 +200,9 @@ class HomeTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "addJoggingSegue" {
             let destinationVC = segue.destinationViewController as AddJoggingTableViewController
+        }else if segue.identifier == "editJoggingSegue"{
+            let destinationVC = segue.destinationViewController as AddJoggingTableViewController
+            destinationVC.jogging = self.joggingSelected
         }
     }
 
