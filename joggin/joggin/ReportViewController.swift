@@ -18,9 +18,13 @@ class ReportViewController: UIViewController {
         super.viewDidLoad()
         
         self.username.text = PFUser.currentUser().username
-        self.report()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.distanceReport()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,9 +50,12 @@ class ReportViewController: UIViewController {
 
     }
     
-    func report(){
-
+    func distanceReport(){
         
+        PZUILoader.sharedLoader().show()
+        
+        var distanceOkWeek = 0
+
         var today = NSDate()
         var gregorian = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         
@@ -63,7 +70,31 @@ class ReportViewController: UIViewController {
         componentsToSubstract.day = 0 - (weekdayComponents.weekday - 2)
         var endOfTheWeek = gregorian?.dateByAddingComponents(componentsToSubstract, toDate: today, options: NSCalendarOptions.allZeros)
         
-      
+        var query = PFQuery(className:"Jogging")
+        query.whereKey("userID", equalTo: PFUser.currentUser())
+        query.whereKey("date", greaterThanOrEqualTo: beginningOfWeek)
+        query.whereKey("date", lessThanOrEqualTo: endOfTheWeek)
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [AnyObject]!, error: NSError!) -> Void in
+            
+            PZUILoader.sharedLoader().hide()
+            
+            if error == nil {
+                // The find succeeded.
+                NSLog("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                for object in objects {
+                    NSLog("%@", object.objectId)
+                    let jogging: Jogging = object as Jogging
+                    distanceOkWeek = distanceOkWeek + jogging.distanceKm.integerValue
+                }
+            } else {
+                // Log details of the failure
+                NSLog("Error: %@ %@", error, error.userInfo!)
+                
+            }
+            self.distanceLabel.text = NSString(format: "%d km", distanceOkWeek)
+        }
         
     }
 
