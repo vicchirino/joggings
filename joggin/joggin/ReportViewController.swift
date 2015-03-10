@@ -18,6 +18,7 @@ class ReportViewController: UIViewController {
         super.viewDidLoad()
         
         self.username.text = PFUser.currentUser().username
+        self.report()
 
         // Do any additional setup after loading the view.
     }
@@ -43,6 +44,27 @@ class ReportViewController: UIViewController {
             tabBarController.selectedIndex = 0
         })
 
+    }
+    
+    func report(){
+
+        
+        var today = NSDate()
+        var gregorian = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        
+        var weekdayComponents: NSDateComponents = gregorian?.components(NSCalendarUnit.WeekdayCalendarUnit, fromDate: today) as NSDateComponents!
+
+        var componentsToSubstract = NSDateComponents()
+        componentsToSubstract.day = 0 - (weekdayComponents.weekday + 5)
+        
+        var beginningOfWeek = gregorian?.dateByAddingComponents(componentsToSubstract, toDate: today, options: NSCalendarOptions.allZeros)
+    
+
+        componentsToSubstract.day = 0 - (weekdayComponents.weekday - 2)
+        var endOfTheWeek = gregorian?.dateByAddingComponents(componentsToSubstract, toDate: today, options: NSCalendarOptions.allZeros)
+        
+      
+        
     }
 
     /*
