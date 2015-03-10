@@ -24,7 +24,7 @@ class ReportViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.distanceReport()
+        self.report()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,11 +50,19 @@ class ReportViewController: UIViewController {
 
     }
     
-    func distanceReport(){
+    func report(){
         
         PZUILoader.sharedLoader().show()
         
-        var distanceOkWeek = 0
+        var distanceOkWeek:Float!
+        var cantOfJoggings:Float!
+        var averageSpeed:Float!
+        var velocityKmH:Float!
+        
+        cantOfJoggings = 0.0
+        velocityKmH = 0.0
+        averageSpeed = 0.0
+        distanceOkWeek = 0.0
 
         var today = NSDate()
         var gregorian = NSCalendar(calendarIdentifier: NSGregorianCalendar)
@@ -84,16 +92,23 @@ class ReportViewController: UIViewController {
                 NSLog("Successfully retrieved \(objects.count) scores.")
                 // Do something with the found objects
                 for object in objects {
+                    cantOfJoggings = cantOfJoggings + 1
                     NSLog("%@", object.objectId)
                     let jogging: Jogging = object as Jogging
-                    distanceOkWeek = distanceOkWeek + jogging.distanceKm.integerValue
+                    distanceOkWeek = distanceOkWeek + jogging.distanceKm.floatValue
+                    var hours:Float = jogging.minutes.floatValue/60
+                    velocityKmH = velocityKmH + (jogging.distanceKm.floatValue / hours)
                 }
             } else {
                 // Log details of the failure
                 NSLog("Error: %@ %@", error, error.userInfo!)
                 
             }
-            self.distanceLabel.text = NSString(format: "%d km", distanceOkWeek)
+            
+            averageSpeed = velocityKmH / cantOfJoggings
+            
+            self.speedLabel.text = NSString(format: "%.1f km/h", averageSpeed)
+            self.distanceLabel.text = NSString(format: "%.1f km", distanceOkWeek)
         }
         
     }
