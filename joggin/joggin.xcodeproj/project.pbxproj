@@ -41,6 +41,12 @@
 		7F8283CC1AA797B7009B45D4 /* InfoLoginContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */; };
 		7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */; };
 		7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */; };
+		7FB3D4831AAF7E3400D2ECA6 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4821AAF7E3400D2ECA6 /* CalendarView.m */; };
+		7FB3D48E1AAF7E8000D2ECA6 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4861AAF7E8000D2ECA6 /* ALView+PureLayout.m */; };
+		7FB3D48F1AAF7E8000D2ECA6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4881AAF7E8000D2ECA6 /* NSArray+PureLayout.m */; };
+		7FB3D4901AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D48A1AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m */; };
+		7FB3D4931AAF7EA400D2ECA6 /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4921AAF7EA400D2ECA6 /* UIColor+FlatColors.m */; };
+		7FB3D4951AAF8B2F00D2ECA6 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4941AAF8B2F00D2ECA6 /* FilterViewController.swift */; };
 		7FC6B2BD1AA9E968000F253B /* Jogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2BC1AA9E968000F253B /* Jogging.swift */; };
 		7FC6B2C21AA9EEEE000F253B /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C11AA9EEEE000F253B /* EmptyStateView.swift */; };
 		7FC6B2C41AA9EF10000F253B /* EmptyStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C31AA9EF10000F253B /* EmptyStateView.xib */; };
@@ -104,6 +110,20 @@
 		7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoLoginContainerViewController.swift; sourceTree = "<group>"; };
 		7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
+		7FB3D4811AAF7E3400D2ECA6 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
+		7FB3D4821AAF7E3400D2ECA6 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
+		7FB3D4851AAF7E8000D2ECA6 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		7FB3D4861AAF7E8000D2ECA6 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		7FB3D4871AAF7E8000D2ECA6 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		7FB3D4881AAF7E8000D2ECA6 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		7FB3D4891AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		7FB3D48A1AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		7FB3D48B1AAF7E8000D2ECA6 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		7FB3D48C1AAF7E8000D2ECA6 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		7FB3D48D1AAF7E8000D2ECA6 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		7FB3D4911AAF7EA400D2ECA6 /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
+		7FB3D4921AAF7EA400D2ECA6 /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
+		7FB3D4941AAF8B2F00D2ECA6 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		7FC6B2BC1AA9E968000F253B /* Jogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jogging.swift; sourceTree = "<group>"; };
 		7FC6B2C11AA9EEEE000F253B /* EmptyStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		7FC6B2C31AA9EF10000F253B /* EmptyStateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyStateView.xib; sourceTree = "<group>"; };
@@ -174,6 +194,7 @@
 		7F0B35E81AA771CE00FC00EF /* joggin */ = {
 			isa = PBXGroup;
 			children = (
+				7FB3D4801AAF7E2700D2ECA6 /* filter */,
 				B59C1CEB1AAE646A008606A4 /* report */,
 				7FC6B2C51AAA1B85000F253B /* Add Jogging */,
 				7FC6B2BB1AA9E937000F253B /* PFObjects */,
@@ -265,6 +286,35 @@
 			name = loader;
 			sourceTree = "<group>";
 		};
+		7FB3D4801AAF7E2700D2ECA6 /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3D4841AAF7E7600D2ECA6 /* purelayout */,
+				7FB3D4811AAF7E3400D2ECA6 /* CalendarView.h */,
+				7FB3D4821AAF7E3400D2ECA6 /* CalendarView.m */,
+				7FB3D4911AAF7EA400D2ECA6 /* UIColor+FlatColors.h */,
+				7FB3D4921AAF7EA400D2ECA6 /* UIColor+FlatColors.m */,
+				7FB3D4941AAF8B2F00D2ECA6 /* FilterViewController.swift */,
+			);
+			name = filter;
+			sourceTree = "<group>";
+		};
+		7FB3D4841AAF7E7600D2ECA6 /* purelayout */ = {
+			isa = PBXGroup;
+			children = (
+				7FB3D4851AAF7E8000D2ECA6 /* ALView+PureLayout.h */,
+				7FB3D4861AAF7E8000D2ECA6 /* ALView+PureLayout.m */,
+				7FB3D4871AAF7E8000D2ECA6 /* NSArray+PureLayout.h */,
+				7FB3D4881AAF7E8000D2ECA6 /* NSArray+PureLayout.m */,
+				7FB3D4891AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.h */,
+				7FB3D48A1AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m */,
+				7FB3D48B1AAF7E8000D2ECA6 /* PureLayout.h */,
+				7FB3D48C1AAF7E8000D2ECA6 /* PureLayout+Internal.h */,
+				7FB3D48D1AAF7E8000D2ECA6 /* PureLayoutDefines.h */,
+			);
+			name = purelayout;
+			sourceTree = "<group>";
+		};
 		7FC6B2BB1AA9E937000F253B /* PFObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +403,7 @@
 				TargetAttributes = {
 					7F0B35E51AA771CE00FC00EF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = LPRQV9JG9T;
 					};
 					7F0B35FD1AA771CE00FC00EF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -411,18 +462,24 @@
 				7F2B08F11AA8B001006D470E /* FirstViewController.swift in Sources */,
 				7F4AF6021AA78D250056D1C6 /* LoginViewController.swift in Sources */,
 				7F2B08F51AA8EEB1006D470E /* TabBarViewController.swift in Sources */,
+				7FB3D48E1AAF7E8000D2ECA6 /* ALView+PureLayout.m in Sources */,
 				7F0B35F11AA771CE00FC00EF /* ViewController.swift in Sources */,
 				7F0B35EC1AA771CE00FC00EF /* AppDelegate.swift in Sources */,
+				7FB3D4831AAF7E3400D2ECA6 /* CalendarView.m in Sources */,
 				7F2B08F31AA8EBB6006D470E /* HomeTableViewController.swift in Sources */,
 				7FC6B2C71AAA1BB7000F253B /* CustomPickerView.swift in Sources */,
 				7FC6B2C21AA9EEEE000F253B /* EmptyStateView.swift in Sources */,
+				7FB3D48F1AAF7E8000D2ECA6 /* NSArray+PureLayout.m in Sources */,
 				B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */,
 				7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */,
 				7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */,
 				7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */,
+				7FB3D4901AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */,
 				7F0B35EF1AA771CE00FC00EF /* joggin.xcdatamodeld in Sources */,
+				7FB3D4951AAF8B2F00D2ECA6 /* FilterViewController.swift in Sources */,
 				B59C1CED1AAE6480008606A4 /* ReportViewController.swift in Sources */,
+				7FB3D4931AAF7EA400D2ECA6 /* UIColor+FlatColors.m in Sources */,
 				7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */,
 				7FC6B2BD1AA9E968000F253B /* Jogging.swift in Sources */,
 				7F8283CC1AA797B7009B45D4 /* InfoLoginContainerViewController.swift in Sources */,
@@ -505,7 +562,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "3f0105fc-6117-4adf-b6ff-8bff33aba50a";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -542,7 +599,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "3f0105fc-6117-4adf-b6ff-8bff33aba50a";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -554,6 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -561,6 +619,7 @@
 				INFOPLIST_FILE = joggin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "joggin/joggin-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -572,6 +631,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -579,6 +639,7 @@
 				INFOPLIST_FILE = joggin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "joggin/joggin-Bridging-Header.h";
 			};
 			name = Release;

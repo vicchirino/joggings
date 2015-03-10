@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--HomeViewController-->
@@ -87,7 +88,7 @@
         <!--FiltreViewController-->
         <scene sceneID="daK-ct-ZK4">
             <objects>
-                <viewController id="vtX-Oi-N2h" userLabel="FiltreViewController" sceneMemberID="viewController">
+                <viewController title="Filter " id="vtX-Oi-N2h" userLabel="FiltreViewController" customClass="FilterViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HsE-Rp-hAD"/>
                         <viewControllerLayoutGuide type="bottom" id="CDj-4A-i7K"/>
@@ -95,13 +96,84 @@
                     <view key="view" contentMode="scaleToFill" id="awJ-EL-iz4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.21330440080016677" blue="0.21417101171469988" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWq-2H-EcO" userLabel="CalendarView" customClass="CalendarView">
+                                <rect key="frame" x="16" y="64" width="568" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="B58-dn-hCx"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BwC-LB-qoQ">
+                                <rect key="frame" x="16" y="464" width="568" height="87"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="From Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-Dm-KGQ" userLabel="FromDate">
+                                        <rect key="frame" x="10" y="21" width="94" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0F-wr-1hl" userLabel="DateFromLabel">
+                                        <rect key="frame" x="518" y="21" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl1-la-H70">
+                                        <rect key="frame" x="10" y="55" width="70" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuD-p2-Ewp" userLabel="DateToLabel">
+                                        <rect key="frame" x="518" y="55" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Yg2-Dm-KGQ" firstAttribute="leading" secondItem="BwC-LB-qoQ" secondAttribute="leading" constant="10" id="6GH-ST-nJI"/>
+                                    <constraint firstAttribute="centerY" secondItem="Yg2-Dm-KGQ" secondAttribute="centerY" multiplier="1.35" id="6eh-Hm-TaG"/>
+                                    <constraint firstAttribute="centerY" secondItem="yl1-la-H70" secondAttribute="centerY" multiplier="0.65" id="7x9-WR-s6s"/>
+                                    <constraint firstItem="yl1-la-H70" firstAttribute="centerY" secondItem="xuD-p2-Ewp" secondAttribute="centerY" id="F8d-qu-Rll"/>
+                                    <constraint firstAttribute="trailing" secondItem="xuD-p2-Ewp" secondAttribute="trailing" constant="10" id="Wnn-X4-mqm"/>
+                                    <constraint firstItem="yl1-la-H70" firstAttribute="leading" secondItem="BwC-LB-qoQ" secondAttribute="leading" constant="10" id="flI-MM-zOi"/>
+                                    <constraint firstAttribute="trailing" secondItem="n0F-wr-1hl" secondAttribute="trailing" constant="10" id="jf7-rI-gxP"/>
+                                    <constraint firstItem="n0F-wr-1hl" firstAttribute="centerY" secondItem="Yg2-Dm-KGQ" secondAttribute="centerY" id="t0G-68-aH2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="BwC-LB-qoQ" secondAttribute="centerX" id="1mx-Sb-b9V"/>
+                            <constraint firstItem="UWq-2H-EcO" firstAttribute="bottom" secondItem="BwC-LB-qoQ" secondAttribute="top" id="7Mb-Ni-38n"/>
+                            <constraint firstItem="BwC-LB-qoQ" firstAttribute="leading" secondItem="awJ-EL-iz4" secondAttribute="leadingMargin" id="Ja5-K7-qIb"/>
+                            <constraint firstItem="CDj-4A-i7K" firstAttribute="top" secondItem="UWq-2H-EcO" secondAttribute="bottom" id="SLe-hP-63y"/>
+                            <constraint firstAttribute="centerX" secondItem="UWq-2H-EcO" secondAttribute="centerX" id="W8X-VG-6ql"/>
+                            <constraint firstItem="CDj-4A-i7K" firstAttribute="top" secondItem="BwC-LB-qoQ" secondAttribute="bottom" id="YRb-b6-MzG"/>
+                            <constraint firstItem="UWq-2H-EcO" firstAttribute="leading" secondItem="awJ-EL-iz4" secondAttribute="leadingMargin" id="bLb-am-d27"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BwC-LB-qoQ" secondAttribute="trailing" id="equ-dG-LPq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UWq-2H-EcO" secondAttribute="trailing" id="l9p-85-HRD"/>
+                            <constraint firstItem="UWq-2H-EcO" firstAttribute="top" secondItem="HsE-Rp-hAD" secondAttribute="bottom" id="xvw-xM-hLH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SLe-hP-63y"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Filter" id="5lk-bf-cdq" userLabel="Filter"/>
+                    <navigationItem key="navigationItem" id="4eI-7B-bVS"/>
+                    <connections>
+                        <outlet property="calendarView" destination="UWq-2H-EcO" id="0p6-T1-8Ju"/>
+                        <outlet property="fromDateLabel" destination="n0F-wr-1hl" id="EWK-ov-1PK"/>
+                        <outlet property="toDateLabel" destination="xuD-p2-Ewp" id="Vrz-Cz-cFh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOJ-ZV-CSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="407" y="281"/>
+            <point key="canvasLocation" x="1219" y="281"/>
         </scene>
         <!--ReportViewController-->
         <scene sceneID="uR7-Zv-zhg">
@@ -240,7 +312,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="IMj-Xw-QBA" kind="relationship" relationship="viewControllers" id="A6Z-iN-gnu"/>
-                        <segue destination="vtX-Oi-N2h" kind="relationship" relationship="viewControllers" id="6ny-U4-gUP"/>
+                        <segue destination="Vax-oJ-4FV" kind="relationship" relationship="viewControllers" id="6ny-U4-gUP"/>
                         <segue destination="cfS-pH-CAJ" kind="relationship" relationship="viewControllers" id="1Xi-4j-tiE"/>
                     </connections>
                 </tabBarController>
@@ -266,6 +338,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mDW-Gq-hpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="407" y="-405"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="qIa-xf-2Ly">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vax-oJ-4FV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Filter" id="5lk-bf-cdq" userLabel="Filter"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NbU-r5-6VP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vtX-Oi-N2h" kind="relationship" relationship="rootViewController" id="zGK-g0-uUO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBK-0Y-cJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="281"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
