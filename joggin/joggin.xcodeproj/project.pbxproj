@@ -50,6 +50,7 @@
 		7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */; };
 		B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */; };
 		B574D2A11AA957BE0056E624 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */; };
+		B59C1CED1AAE6480008606A4 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C1CEC1AAE6480008606A4 /* ReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		B59C1CEC1AAE6480008606A4 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		7F0B35E81AA771CE00FC00EF /* joggin */ = {
 			isa = PBXGroup;
 			children = (
+				B59C1CEB1AAE646A008606A4 /* report */,
 				7FC6B2C51AAA1B85000F253B /* Add Jogging */,
 				7FC6B2BB1AA9E937000F253B /* PFObjects */,
 				B574D29D1AA957860056E624 /* home */,
@@ -293,6 +296,14 @@
 			name = home;
 			sourceTree = "<group>";
 		};
+		B59C1CEB1AAE646A008606A4 /* report */ = {
+			isa = PBXGroup;
+			children = (
+				B59C1CEC1AAE6480008606A4 /* ReportViewController.swift */,
+			);
+			name = report;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +422,7 @@
 				7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */,
 				7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */,
 				7F0B35EF1AA771CE00FC00EF /* joggin.xcdatamodeld in Sources */,
+				B59C1CED1AAE6480008606A4 /* ReportViewController.swift in Sources */,
 				7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */,
 				7FC6B2BD1AA9E968000F253B /* Jogging.swift in Sources */,
 				7F8283CC1AA797B7009B45D4 /* InfoLoginContainerViewController.swift in Sources */,

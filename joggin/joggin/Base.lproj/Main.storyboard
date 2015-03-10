@@ -106,7 +106,7 @@
         <!--ReportViewController-->
         <scene sceneID="uR7-Zv-zhg">
             <objects>
-                <viewController id="cfS-pH-CAJ" userLabel="ReportViewController" sceneMemberID="viewController">
+                <viewController id="cfS-pH-CAJ" userLabel="ReportViewController" customClass="ReportViewController" customModule="joggin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5dZ-3o-rNs"/>
                         <viewControllerLayoutGuide type="bottom" id="NR2-6K-o2F"/>
@@ -114,14 +114,118 @@
                     <view key="view" contentMode="scaleToFill" id="o1x-LA-U9N">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.42121103644495805" green="0.68736250883972994" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vicchirino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eB-aU-SAF" userLabel="username">
+                                <rect key="frame" x="247" y="40" width="107" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User report from last week" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlP-15-pQU" userLabel="Description">
+                                <rect key="frame" x="162" y="89" width="277" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnL-H4-scD" userLabel="Speed View">
+                                <rect key="frame" x="26" y="138" width="548" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Speed:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLZ-VI-KJz" userLabel="Title label">
+                                        <rect key="frame" x="10" y="23" width="63" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 km/h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bx-Fw-OH8" userLabel="Info Speed">
+                                        <rect key="frame" x="466" y="23" width="72" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43363381016153124" green="0.57169921713384997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="2Bx-Fw-OH8" secondAttribute="centerY" id="Cnt-dQ-ofm"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Bx-Fw-OH8" secondAttribute="trailing" constant="10" id="GfI-bR-COT"/>
+                                    <constraint firstAttribute="height" constant="70" id="Tda-VK-yIq"/>
+                                    <constraint firstItem="uLZ-VI-KJz" firstAttribute="leading" secondItem="XnL-H4-scD" secondAttribute="leading" constant="10" id="fUk-l6-dbU"/>
+                                    <constraint firstAttribute="centerY" secondItem="uLZ-VI-KJz" secondAttribute="centerY" id="wik-W2-CTx"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD7-8c-iIY" userLabel="logout button">
+                                <rect key="frame" x="266" y="492" width="68" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.26552243196436559" green="0.71523064354370902" blue="0.92315735479797978" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.14535318876360886" green="0.38981201756438005" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Logout:" destination="cfS-pH-CAJ" eventType="touchUpInside" id="fPS-AH-rFp"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-st-NAP" userLabel="Distance View">
+                                <rect key="frame" x="26" y="228" width="548" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCD-KP-f5z" userLabel="title label">
+                                        <rect key="frame" x="10" y="23" width="83" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 km" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Gc-VF-Fo4" userLabel="Info Distance">
+                                        <rect key="frame" x="483" y="23" width="55" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.66714015151515149" green="0.66714015151515149" blue="0.66714015151515149" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="QCD-KP-f5z" secondAttribute="centerY" id="Hvf-PP-pgu"/>
+                                    <constraint firstAttribute="centerY" secondItem="3Gc-VF-Fo4" secondAttribute="centerY" id="Z22-7i-F0x"/>
+                                    <constraint firstItem="QCD-KP-f5z" firstAttribute="leading" secondItem="HbB-st-NAP" secondAttribute="leading" constant="10" id="hcw-7y-2E4"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Gc-VF-Fo4" secondAttribute="trailing" constant="10" id="kJN-5Y-Kqk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="WD7-8c-iIY" secondAttribute="centerX" id="3Lc-YQ-hxk"/>
+                            <constraint firstItem="HbB-st-NAP" firstAttribute="leading" secondItem="o1x-LA-U9N" secondAttribute="leadingMargin" constant="10" id="3Vl-sM-e93"/>
+                            <constraint firstItem="WD7-8c-iIY" firstAttribute="leading" secondItem="o1x-LA-U9N" secondAttribute="leadingMargin" constant="10" id="8ac-A2-VnS"/>
+                            <constraint firstItem="HbB-st-NAP" firstAttribute="top" secondItem="XnL-H4-scD" secondAttribute="bottom" constant="20" id="KNC-CQ-M4B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WD7-8c-iIY" secondAttribute="trailing" constant="10" id="OA5-lh-TdK"/>
+                            <constraint firstItem="TlP-15-pQU" firstAttribute="top" secondItem="7eB-aU-SAF" secondAttribute="bottom" constant="20" id="Sm6-kb-xKy"/>
+                            <constraint firstItem="XnL-H4-scD" firstAttribute="leading" secondItem="o1x-LA-U9N" secondAttribute="leadingMargin" constant="10" id="VMN-lY-HJr"/>
+                            <constraint firstItem="HbB-st-NAP" firstAttribute="height" secondItem="XnL-H4-scD" secondAttribute="height" id="VZs-vL-ff2"/>
+                            <constraint firstAttribute="centerX" secondItem="TlP-15-pQU" secondAttribute="centerX" id="bZL-OU-nto"/>
+                            <constraint firstItem="TlP-15-pQU" firstAttribute="bottom" secondItem="XnL-H4-scD" secondAttribute="top" constant="-20" id="fE8-ea-Tec"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XnL-H4-scD" secondAttribute="trailing" constant="10" id="fS3-fA-T6K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HbB-st-NAP" secondAttribute="trailing" constant="10" id="l1k-A9-iqy"/>
+                            <constraint firstItem="XnL-H4-scD" firstAttribute="top" secondItem="7eB-aU-SAF" secondAttribute="bottom" constant="50" id="mxP-ju-enk"/>
+                            <constraint firstAttribute="centerX" secondItem="7eB-aU-SAF" secondAttribute="centerX" id="nDl-dq-5R6"/>
+                            <constraint firstItem="7eB-aU-SAF" firstAttribute="top" secondItem="5dZ-3o-rNs" secondAttribute="bottom" constant="20" id="qtJ-L5-L9S"/>
+                            <constraint firstItem="NR2-6K-o2F" firstAttribute="top" secondItem="WD7-8c-iIY" secondAttribute="bottom" constant="20" id="z3P-cf-PiX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mxP-ju-enk"/>
+                                <exclude reference="8ac-A2-VnS"/>
+                                <exclude reference="OA5-lh-TdK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Report" id="0as-zW-XNu" userLabel="Report"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="3Gc-VF-Fo4" id="d3u-Jw-Pzu"/>
+                        <outlet property="speedLabel" destination="2Bx-Fw-OH8" id="6bV-M7-OU5"/>
+                        <outlet property="username" destination="7eB-aU-SAF" id="PzJ-WA-RDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDX-Em-HV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309" y="938"/>
+            <point key="canvasLocation" x="-309" y="936"/>
         </scene>
         <!--TabBarController-->
         <scene sceneID="Dgg-wo-03u">

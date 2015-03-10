@@ -13,15 +13,7 @@ let reuseIdentifier = "EntryCell"
 class AddJoggingTableViewController: UITableViewController {
 
     var customPickerView:CustomPickerView!
-    var jogging: Jogging! {
-        didSet {
-            self.distanceKm = jogging.distanceKm
-            self.minutes = NSString(format: "%d", jogging.minutes.integerValue)
-            var dateFormatter = NSDateFormatter()
-            self.date = dateFormatter.stringFromDate(jogging.date)
-            self.tableView.reloadData()
-        }
-    }
+    var jogging: Jogging!
     var footerView: UIView!
     var distanceKm: NSString!
     var date: NSString!
@@ -40,10 +32,6 @@ class AddJoggingTableViewController: UITableViewController {
         self.customPickerView.userInteractionEnabled = true
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"pressDoneButton:", name: kNotificationDoneButtonPicker, object: nil);
-        
-        self.distanceKm = ""
-        self.date = ""
-        self.minutes = ""
         
         self.footerView = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 300))
         self.footerView.backgroundColor = UIColor.whiteColor()

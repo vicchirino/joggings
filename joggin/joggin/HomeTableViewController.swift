@@ -49,10 +49,12 @@ class HomeTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-
+        self.removeEmptyStateView()
     }
     
     func getUserJogging() {
+        
+        self.joggingsArray.removeAllObjects()
         
         var query = PFQuery(className:"Jogging")
         query.whereKey("userID", equalTo: PFUser.currentUser())
@@ -70,7 +72,12 @@ class HomeTableViewController: UITableViewController {
                     let jogging: Jogging = object as Jogging
                     self.joggingsArray.addObject(jogging)
                 }
-                self.joggingsArray.count > 0 ? self.tableView.reloadData() : self.addEmptyState()
+                if self.joggingsArray.count > 0 {
+                    self.removeEmptyStateView()
+                    self.tableView.reloadData()
+                }else{
+                    self.addEmptyState()
+                }
             } else {
                 // Log details of the failure
                 NSLog("Error: %@ %@", error, error.userInfo!)

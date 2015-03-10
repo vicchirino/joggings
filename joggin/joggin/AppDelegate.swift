@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("p9uVPpupjkiPmn35pDmH5X4JwWeOkVKEvJs3rRyT", clientKey: "62jzzhx0RfAo94yQMBGuKr45chck57XYn1o9OC0z")
         
         Jogging.initialize()
-        
+            
         return true
     }
 
