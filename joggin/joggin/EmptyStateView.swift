@@ -23,6 +23,7 @@ class EmptyStateView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.descriptionLabel = UILabel()
         var bundle = NSBundle.mainBundle()
         var nibsVies = bundle.loadNibNamed("EmptyStateView", owner: self, options: nil) as NSArray
         var mainView = nibsVies[0] as UIView

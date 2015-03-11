@@ -7,7 +7,7 @@
 - (void)tapFromDate:(NSDate *)fromDate toDate:(NSDate *) toDate;
 - (void)tapedAcceptStartDate:(NSDate *)firstDate andEndDate:(NSDate*) secondDate;
 - (void)tappedDeleteDates;
-- (void) didChangeStartDate:(NSDate *) startDate andEndDate:(NSDate *) endDate;
+- (void)didChangeStartDate:(NSDate *) startDate andEndDate:(NSDate *) endDate;
 @end
 
 @interface CalendarView : UIView
