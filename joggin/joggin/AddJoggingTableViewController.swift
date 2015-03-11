@@ -18,6 +18,7 @@ class AddJoggingTableViewController: UITableViewController {
     var distanceKm: NSString!
     var date: NSString!
     var minutes: NSString!
+    var addEntryButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,27 +37,23 @@ class AddJoggingTableViewController: UITableViewController {
         self.footerView = UIView(frame: CGRectMake(0, 0, self.view.bounds.width, 300))
         self.footerView.backgroundColor = UIColor.whiteColor()
         
-        var addEntryButton = UIButton()
-        addEntryButton.setTitle("Add new jogging", forState: UIControlState.Normal)
-        addEntryButton.setTitleColor(UIColor(red: 137.0/255.0, green: 192.0/255.0, blue: 255.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
-        addEntryButton.addTarget(self, action: "addPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-        addEntryButton.frame = self.footerView.frame
-        addEntryButton.center = self.footerView.center
-        self.footerView.addSubview(addEntryButton)
+        self.addEntryButton = UIButton()
+        self.addEntryButton.setTitle("Add new jogging", forState: UIControlState.Normal)
+        self.addEntryButton.setTitleColor(UIColor(red: 137.0/255.0, green: 192.0/255.0, blue: 255.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
+        self.addEntryButton.addTarget(self, action: "addPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addEntryButton.frame = self.footerView.frame
+        self.addEntryButton.center = self.footerView.center
+        self.footerView.addSubview(self.addEntryButton)
         
         self.tableView.tableFooterView = self.footerView
     }
     
-//    func setJogging(jogging: Jogging!){
-//        self.distanceKm = jogging.distanceKm
-//        self.minutes = NSString(format: "%d", jogging.minutes.integerValue)
-//        var dateFormatter = NSDateFormatter()
-//        self.date = dateFormatter.stringFromDate(jogging.date)
-//        self.tableView.reloadData()
-//    }
     
-    func setDistance(distance: NSString, timeSpent:NSNumber, inDate:NSDate){
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if (self.jogging != nil){
+            self.addEntryButton.setTitle("Edit jogging", forState: UIControlState.Normal)
+        }
     }
 
     func addPressed(sender: UIButton){

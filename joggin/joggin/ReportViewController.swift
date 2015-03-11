@@ -24,6 +24,7 @@ class ReportViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.username.text = PFUser.currentUser().username
         self.report()
     }
 
@@ -105,8 +106,12 @@ class ReportViewController: UIViewController {
                 
             }
             
-            averageSpeed = velocityKmH / cantOfJoggings
-            
+            if(cantOfJoggings == 0){
+                    averageSpeed = 0
+            }else{
+                averageSpeed = velocityKmH / cantOfJoggings
+            }
+                        
             self.speedLabel.text = NSString(format: "%.1f km/h", averageSpeed)
             self.distanceLabel.text = NSString(format: "%.1f km", distanceOkWeek)
         }

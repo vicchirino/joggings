@@ -49,7 +49,9 @@ class HomeTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
-        self.removeEmptyStateView()
+        if self.joggingsArray.count > 0{
+            self.removeEmptyStateView()
+        }
     }
     
     func getUserJogging() {
