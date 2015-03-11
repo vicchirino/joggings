@@ -11,7 +11,6 @@
 		7F0B35EF1AA771CE00FC00EF /* joggin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B35ED1AA771CE00FC00EF /* joggin.xcdatamodeld */; };
 		7F0B35F11AA771CE00FC00EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B35F01AA771CE00FC00EF /* ViewController.swift */; };
 		7F0B35F41AA771CE00FC00EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B35F21AA771CE00FC00EF /* Main.storyboard */; };
-		7F0B35F61AA771CE00FC00EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B35F51AA771CE00FC00EF /* Images.xcassets */; };
 		7F0B35F91AA771CE00FC00EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B35F71AA771CE00FC00EF /* LaunchScreen.xib */; };
 		7F0B36051AA771CE00FC00EF /* jogginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B36041AA771CE00FC00EF /* jogginTests.swift */; };
 		7F2B08F11AA8B001006D470E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2B08F01AA8B001006D470E /* FirstViewController.swift */; };
@@ -41,6 +40,7 @@
 		7F8283CC1AA797B7009B45D4 /* InfoLoginContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */; };
 		7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */; };
 		7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */; };
+		7F84320D1AB0960700113002 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F84320C1AB0960700113002 /* Images.xcassets */; };
 		7FB3D4831AAF7E3400D2ECA6 /* CalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4821AAF7E3400D2ECA6 /* CalendarView.m */; };
 		7FB3D48E1AAF7E8000D2ECA6 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4861AAF7E8000D2ECA6 /* ALView+PureLayout.m */; };
 		7FB3D48F1AAF7E8000D2ECA6 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FB3D4881AAF7E8000D2ECA6 /* NSArray+PureLayout.m */; };
@@ -77,7 +77,6 @@
 		7F0B35EE1AA771CE00FC00EF /* joggin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = joggin.xcdatamodel; sourceTree = "<group>"; };
 		7F0B35F01AA771CE00FC00EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F0B35F31AA771CE00FC00EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7F0B35F51AA771CE00FC00EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F0B35F81AA771CE00FC00EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7F0B35FE1AA771CE00FC00EF /* jogginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jogginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0B36031AA771CE00FC00EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		7F8283CB1AA797B7009B45D4 /* InfoLoginContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoLoginContainerViewController.swift; sourceTree = "<group>"; };
 		7F8283CF1AA798B9009B45D4 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		7F8283D11AA7A12E009B45D4 /* EmptySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptySegue.swift; sourceTree = "<group>"; };
+		7F84320C1AB0960700113002 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7FB3D4811AAF7E3400D2ECA6 /* CalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		7FB3D4821AAF7E3400D2ECA6 /* CalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarView.m; sourceTree = "<group>"; };
 		7FB3D4851AAF7E8000D2ECA6 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
@@ -207,9 +207,9 @@
 				7F0B35F01AA771CE00FC00EF /* ViewController.swift */,
 				7F2B08F41AA8EEB1006D470E /* TabBarViewController.swift */,
 				7F0B35F21AA771CE00FC00EF /* Main.storyboard */,
-				7F0B35F51AA771CE00FC00EF /* Images.xcassets */,
 				7F0B35F71AA771CE00FC00EF /* LaunchScreen.xib */,
 				7F0B35ED1AA771CE00FC00EF /* joggin.xcdatamodeld */,
+				7F84320C1AB0960700113002 /* Images.xcassets */,
 				7F0B35E91AA771CE00FC00EF /* Supporting Files */,
 			);
 			path = joggin;
@@ -440,11 +440,11 @@
 			files = (
 				7FC6B2C41AA9EF10000F253B /* EmptyStateView.xib in Resources */,
 				7FC6B2C91AAA1BC9000F253B /* CustomPickerView.xib in Resources */,
+				7F84320D1AB0960700113002 /* Images.xcassets in Resources */,
 				7F4AF6001AA78AC90056D1C6 /* login.storyboard in Resources */,
 				7F0B35F41AA771CE00FC00EF /* Main.storyboard in Resources */,
 				7F0B35F91AA771CE00FC00EF /* LaunchScreen.xib in Resources */,
 				B574D2A11AA957BE0056E624 /* HomeTableViewCell.xib in Resources */,
-				7F0B35F61AA771CE00FC00EF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

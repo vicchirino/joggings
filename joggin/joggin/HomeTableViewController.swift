@@ -32,7 +32,7 @@ class HomeTableViewController: UITableViewController {
         self.user = PFUser.currentUser()
         
         if (user != nil){
-            self.title = user.username
+            self.navigationItem.title = user.username
             self.getUserJogging()
         }else{
             NSLog("No hay usuario")

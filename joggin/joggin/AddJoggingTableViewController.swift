@@ -38,7 +38,7 @@ class AddJoggingTableViewController: UITableViewController {
         
         var addEntryButton = UIButton()
         addEntryButton.setTitle("Add new jogging", forState: UIControlState.Normal)
-        addEntryButton.setTitleColor(UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
+        addEntryButton.setTitleColor(UIColor(red: 137.0/255.0, green: 192.0/255.0, blue: 255.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
         addEntryButton.addTarget(self, action: "addPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         addEntryButton.frame = self.footerView.frame
         addEntryButton.center = self.footerView.center

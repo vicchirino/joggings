@@ -78,7 +78,7 @@
     [clearView autoSetDimension:ALDimensionHeight toSize:48];
     
     titleBackgroundView = [UIView new];
-    titleBackgroundView.backgroundColor = [UIColor flatMidnightBlueColor];
+    titleBackgroundView.backgroundColor = [UIColor clearColor];
     titleBackgroundView.alpha = 0.6;
     [clearView addSubview:titleBackgroundView];
     
@@ -113,7 +113,7 @@
     [titleText setText:dateString];
     [titleText setFont:[UIFont fontWithName:@"OpenSans" size:16.0f]];
     [titleText sizeToFit];
-    [titleText setTextColor:[UIColor whiteColor]];
+    [titleText setTextColor:[UIColor colorWithRed:137/255.f green:192/255.f blue:255/255.f alpha:1.0]];
     [clearView addSubview:titleText];
 //
 //    textLabel = [UILabel new];
@@ -206,12 +206,12 @@
 
 
     UIButton *acceptButton = [UIButton new];
-    acceptButton.backgroundColor = [UIColor flatSilverColor];
+    acceptButton.backgroundColor = [UIColor colorWithRed:255/255.f green:171/255.f blue:22/255.f alpha:1.0];
     acceptButton.layer.cornerRadius = 5.0;
     acceptButton.layer.borderWidth = 1.5f;
     acceptButton.layer.borderColor = [UIColor clearColor].CGColor;
     [acceptButton setTitle:@"Filter" forState:UIControlStateNormal];
-    [acceptButton addTarget:self action:@selector(tapAccept) forControlEvents:UIControlEventTouchUpInside];
+    [acceptButton addTarget:self action:@selector(tapAccept) forControlEvents:      UIControlEventTouchUpInside];
     [self addSubview:acceptButton];
 
     [acceptButton autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:15];
@@ -222,7 +222,7 @@
     //Delete Dates
     
     UIButton *deleteDatesButton = [UIButton new];
-    deleteDatesButton.backgroundColor = [UIColor flatAsbestosColor];
+    deleteDatesButton.backgroundColor = [UIColor colorWithRed:178/255.f green:117/255.f blue:8/255.f alpha:1.0];
     [deleteDatesButton addTarget:self action:@selector(tapDeleteDates) forControlEvents:UIControlEventTouchUpInside];
     deleteDatesButton.layer.cornerRadius = 5.0;
     deleteDatesButton.layer.borderWidth = 1.5;
@@ -424,7 +424,7 @@
             return;
         }
         
-        if ([endComponent month] > [components month] && [endComponent year] == [components year]){
+        if ([endComponent month] > [components month] && [endComponent year] == [components year] && [startComponent month] <= [components month]){
             for (NSInteger i = [startComponent day]; i <= days.length; i++){
                 UIButton *previousSelected =(UIButton *) [self viewWithTag:i];
                 [previousSelected setBackgroundColor:kRangeDate];
