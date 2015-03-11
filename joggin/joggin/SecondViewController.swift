@@ -17,6 +17,15 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var repeatPasswordTextfield: UITextField!
+    @IBAction func touchUsername(sender: AnyObject) {
+        self.usernameTextfield.becomeFirstResponder()
+    }
+    @IBAction func touchPassword(sender: AnyObject) {
+        self.passwordTextfield.becomeFirstResponder()
+    }
+    @IBAction func touchRepeatPassword(sender: AnyObject) {
+        self.repeatPasswordTextfield.becomeFirstResponder()
+    }
     var delegate: SecondViewControllerDelegate?
 
     override func viewDidLoad() {

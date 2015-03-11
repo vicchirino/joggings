@@ -16,6 +16,12 @@ class FirstViewController: UIViewController {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBAction func touchUsername(sender: AnyObject) {
+        self.usernameTextField.becomeFirstResponder()
+    }
+    @IBAction func touchPassword(sender: AnyObject) {
+        self.passwordTextField.becomeFirstResponder()
+    }
     var delegate: FirstViewControllerDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()

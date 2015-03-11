@@ -20,6 +20,10 @@ class AddJoggingTableViewController: UITableViewController {
     var minutes: NSString!
     var addEntryButton: UIButton!
     
+    @IBAction func editInfoGesture(sender: AnyObject) {
+//        var entryCell = sender as EntryTableViewCell
+//        entryCell.infoTextField.becomeFirstResponder()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

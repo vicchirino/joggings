@@ -53,7 +53,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kvu-Ms-A54">
                                             <rect key="frame" x="18" y="26" width="44" height="28"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Info" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NMc-US-MtB">
@@ -62,6 +62,7 @@
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                                         </textField>
                                     </subviews>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="NMc-US-MtB" secondAttribute="trailing" constant="10" id="KY5-sZ-vg2"/>
                                         <constraint firstAttribute="centerY" secondItem="kvu-Ms-A54" secondAttribute="centerY" id="b2d-5A-l85"/>
@@ -69,9 +70,11 @@
                                         <constraint firstItem="kvu-Ms-A54" firstAttribute="centerY" secondItem="NMc-US-MtB" secondAttribute="centerY" id="zyR-fF-VnL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="infoLabel" destination="kvu-Ms-A54" id="fFi-aa-iAG"/>
                                     <outlet property="infoTextField" destination="NMc-US-MtB" id="Ssk-n9-dUu"/>
+                                    <outletCollection property="gestureRecognizers" destination="tPP-qV-JW4" appends="YES" id="JRb-VO-FPf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,6 +86,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7a-y9-4Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tPP-qV-JW4" userLabel="edit info gesture">
+                    <connections>
+                        <action selector="editInfoGesture:" destination="xc1-2O-wjG" id="sS1-Dd-2im"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1930" y="-1146"/>
         </scene>
@@ -111,7 +119,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg2-Dm-KGQ" userLabel="FromDate">
                                         <rect key="frame" x="10" y="21" width="94" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0F-wr-1hl" userLabel="DateFromLabel">
@@ -123,7 +131,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl1-la-H70">
                                         <rect key="frame" x="10" y="55" width="70" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuD-p2-Ewp" userLabel="DateToLabel">
@@ -354,7 +362,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="8FI-0d-dLr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.70588235290000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.32549019607843138" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="selectedImageTintColor" red="1" green="0.70588235290000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
