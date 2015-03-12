@@ -8,13 +8,14 @@
 
 import UIKit
 
-class EntryTableViewCell: UITableViewCell {
+class EntryTableViewCell: UITableViewCell, UITextFieldDelegate{
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var infoTextField: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.infoTextField.delegate = self
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -22,5 +23,10 @@ class EntryTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
 }

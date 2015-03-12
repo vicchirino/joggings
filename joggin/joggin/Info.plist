@@ -36,5 +36,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Bacon-Kingdom.ttf</string>
+	</array>
 </dict>
 </plist>

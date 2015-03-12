@@ -43,6 +43,7 @@ class AddJoggingTableViewController: UITableViewController {
         
         self.addEntryButton = UIButton()
         self.addEntryButton.setTitle("Add new jogging", forState: UIControlState.Normal)
+        self.addEntryButton.titleLabel?.font = UIFont(name: "BaconKingdom", size: 20)
         self.addEntryButton.setTitleColor(UIColor(red: 137.0/255.0, green: 192.0/255.0, blue: 255.0/255.0, alpha: 1.0), forState: UIControlState.Normal)
         self.addEntryButton.addTarget(self, action: "addPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addEntryButton.frame = self.footerView.frame
@@ -156,7 +157,7 @@ class AddJoggingTableViewController: UITableViewController {
     
     func checkParameters() -> Bool
     {
-        
+                
         let cell0 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0)) as EntryTableViewCell
         let cell1 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 1, inSection: 0)) as EntryTableViewCell
         let cell2 = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as EntryTableViewCell
@@ -167,6 +168,7 @@ class AddJoggingTableViewController: UITableViewController {
                 return false
             }
         }
+    
         return true
     }
     
@@ -234,6 +236,9 @@ class AddJoggingTableViewController: UITableViewController {
         cell.infoTextField.text = string
         cell.infoTextField.resignFirstResponder()
     }
+    
+
+    
 
     /*
     // Override to support conditional editing of the table view.

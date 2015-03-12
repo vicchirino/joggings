@@ -111,7 +111,7 @@
     [format setDateFormat:@"MMMM yyyy"];
     NSString *dateString = [[format stringFromDate:self.calendarDate] capitalizedString];
     [titleText setText:dateString];
-    [titleText setFont:[UIFont fontWithName:@"OpenSans" size:16.0f]];
+    [titleText setFont:[UIFont fontWithName:@"BaconKingdom" size:16.0f]];
     [titleText sizeToFit];
     [titleText setTextColor:[UIColor colorWithRed:137/255.f green:192/255.f blue:255/255.f alpha:1.0]];
     [clearView addSubview:titleText];
@@ -141,7 +141,7 @@
         weekNameLabel.titleLabel.text = [_weekNames objectAtIndex:i];
         [weekNameLabel setTitle:[_weekNames objectAtIndex:i] forState:UIControlStateNormal];
         [weekNameLabel setTitleColor:kGrayColorDays forState:UIControlStateNormal];
-        [weekNameLabel.titleLabel setFont:[UIFont fontWithName:@"OpenSans" size:14.0f]];
+        [weekNameLabel.titleLabel setFont:[UIFont fontWithName:@"BaconKingdom" size:14.0f]];
         weekNameLabel.userInteractionEnabled = NO;
         [self addSubview:weekNameLabel];
         
@@ -171,7 +171,7 @@
         button.titleLabel.text = [NSString stringWithFormat:@"%ld",i+1];
         [button setTitle:[NSString stringWithFormat:@"%ld",i+1] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [button.titleLabel setFont:[UIFont fontWithName:@"OpenSans-Light" size:14.0f]];
+        [button.titleLabel setFont:[UIFont fontWithName:@"BaconKingdom" size:14.0f]];
 //        button.backgroundColor = [UIColor colorWithRed:236.0/255.0 green:236.0/255.0 blue:236.0/255.0 alpha:1];
         button.backgroundColor = [UIColor whiteColor];
         [button addTarget:self action:@selector(tappedDate:) forControlEvents:UIControlEventTouchUpInside];
@@ -186,7 +186,7 @@
         if(i+1 == [todayComponents day] && components.month == [todayComponents month] && components.year == [todayComponents year]) {
             [button setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1]];
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-            [button.titleLabel setFont:[UIFont fontWithName:@"OpenSans" size:14.0f]];
+            [button.titleLabel setFont:[UIFont fontWithName:@"BaconKingdom" size:14.0f]];
         }
         
         [self addSubview:button];
@@ -211,6 +211,7 @@
     acceptButton.layer.borderWidth = 1.5f;
     acceptButton.layer.borderColor = [UIColor clearColor].CGColor;
     [acceptButton setTitle:@"Filter" forState:UIControlStateNormal];
+    acceptButton.titleLabel.font = [UIFont fontWithName:@"BaconKingdom" size:15];
     [acceptButton addTarget:self action:@selector(tapAccept) forControlEvents:      UIControlEventTouchUpInside];
     [self addSubview:acceptButton];
 
@@ -227,7 +228,8 @@
     deleteDatesButton.layer.cornerRadius = 5.0;
     deleteDatesButton.layer.borderWidth = 1.5;
     deleteDatesButton.layer.borderColor = [UIColor clearColor].CGColor;
-    [deleteDatesButton setTitle:@"Delete dates" forState:UIControlStateNormal];
+    [deleteDatesButton setTitle:@"Delete" forState:UIControlStateNormal];
+    deleteDatesButton.titleLabel.font = [UIFont fontWithName:@"BaconKingdom" size:15];
     [self addSubview:deleteDatesButton];
     
     [deleteDatesButton autoPinEdgeToSuperviewEdge:ALEdgeRight withInset:15];
@@ -456,7 +458,7 @@
         
         if(i == [todayComponents day] && components.month == [todayComponents month] && components.year == [todayComponents year]) {
             [previousSelected setBackgroundColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1]];
-            [previousSelected.titleLabel setFont:[UIFont fontWithName:@"OpenSans" size:14.0f]];
+            [previousSelected.titleLabel setFont:[UIFont fontWithName:@"BaconKingdom" size:14.0f]];
         }
     }
 }
