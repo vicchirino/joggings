@@ -42,7 +42,7 @@ class HomeTableViewController: UITableViewController {
     
     func fetchInformation(){
         self.user = PFUser.currentUser()
-        self.title = user.username
+        self.navigationItem.title = user.username
         self.getUserJogging()
     }
     

@@ -29,4 +29,32 @@ class EntryTableViewCell: UITableViewCell, UITextFieldDelegate{
         return true;
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
+        
+        switch string {
+        case "0","1","2","3","4","5","6","7","8","9":
+            return true
+        case ".":
+            let array = Array(textField.text)
+            var decimalCount = 0
+            for character in array {
+                if character == "." {
+                    decimalCount++
+                }
+            }
+            
+            if decimalCount == 1 {
+                return false
+            } else {
+                return true
+            }
+        default:
+            let array = Array(string)
+            if array.count == 0 {
+                return true
+            }
+            return false
+        }
+    }
 }
+    

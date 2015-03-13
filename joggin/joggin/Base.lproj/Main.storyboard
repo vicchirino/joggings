@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I13-p5-zDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I13-p5-zDh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -73,8 +73,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Info" textAlignment="right" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="NMc-US-MtB">
-                                            <rect key="frame" x="542" y="29" width="40" height="23"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Info" textAlignment="right" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="NMc-US-MtB">
+                                            <rect key="frame" x="535" y="29" width="48" height="23"/>
                                             <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="22"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert"/>
                                         </textField>
@@ -252,19 +252,19 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eB-aU-SAF" userLabel="username">
-                                <rect key="frame" x="237" y="40" width="126" height="26"/>
+                                <rect key="frame" x="238" y="40" width="126" height="26"/>
                                 <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.32549019610000002" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User report from last week" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlP-15-pQU" userLabel="Description">
-                                <rect key="frame" x="117" y="86" width="367" height="26"/>
+                                <rect key="frame" x="21" y="86" width="558" height="26"/>
                                 <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.32549019610000002" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnL-H4-scD" userLabel="Speed View">
-                                <rect key="frame" x="26" y="132" width="548" height="70"/>
+                                <rect key="frame" x="26" y="131" width="548" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLZ-VI-KJz" userLabel="Title label">
                                         <rect key="frame" x="10" y="25" width="67" height="21"/>
@@ -273,7 +273,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="km/h" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bx-Fw-OH8" userLabel="Info Speed">
-                                        <rect key="frame" x="485" y="25" width="53" height="21"/>
+                                        <rect key="frame" x="486" y="25" width="53" height="21"/>
                                         <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -299,7 +299,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-st-NAP" userLabel="Distance View">
-                                <rect key="frame" x="26" y="222" width="548" height="70"/>
+                                <rect key="frame" x="26" y="221" width="548" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCD-KP-f5z" userLabel="title label">
                                         <rect key="frame" x="10" y="25" width="98" height="21"/>
@@ -338,6 +338,8 @@
                             <constraint firstItem="XnL-H4-scD" firstAttribute="leading" secondItem="o1x-LA-U9N" secondAttribute="leadingMargin" constant="10" id="VMN-lY-HJr"/>
                             <constraint firstItem="HbB-st-NAP" firstAttribute="height" secondItem="XnL-H4-scD" secondAttribute="height" id="VZs-vL-ff2"/>
                             <constraint firstAttribute="centerX" secondItem="TlP-15-pQU" secondAttribute="centerX" id="bZL-OU-nto"/>
+                            <constraint firstItem="TlP-15-pQU" firstAttribute="leading" secondItem="o1x-LA-U9N" secondAttribute="leadingMargin" constant="5" id="bjb-66-3YI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TlP-15-pQU" secondAttribute="trailing" constant="5" id="bvM-u6-As2"/>
                             <constraint firstItem="r1t-Ue-ngC" firstAttribute="top" secondItem="5dZ-3o-rNs" secondAttribute="top" id="ceX-Fl-nyE"/>
                             <constraint firstAttribute="trailing" secondItem="r1t-Ue-ngC" secondAttribute="trailing" id="dvy-Fk-mlT"/>
                             <constraint firstItem="TlP-15-pQU" firstAttribute="bottom" secondItem="XnL-H4-scD" secondAttribute="top" constant="-20" id="fE8-ea-Tec"/>
