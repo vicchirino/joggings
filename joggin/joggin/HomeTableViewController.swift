@@ -153,11 +153,12 @@ class HomeTableViewController: UITableViewController {
         cell?.setDistance(jogging.distanceKm)
         cell?.setDate(jogging.date)
         cell?.setTime(jogging.minutes)
+        cell?.setAverageSpeed(jogging.distanceKm, time: jogging.minutes)
         return cell!
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 70;
+        return 100;
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

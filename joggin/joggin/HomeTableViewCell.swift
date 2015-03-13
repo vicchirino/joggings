@@ -13,6 +13,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var averageSpeedLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -50,6 +51,13 @@ class HomeTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "MMM d, yyyy"
         var dayString: NSString = dateFormatter.stringFromDate(date)
         self.dateLabel.text = dayString
+    }
+    
+    func setAverageSpeed(distance:NSString, time:NSNumber){
+        var hours:Float = time.floatValue/60
+        var velocityKmH = (distance.floatValue / hours)
+        self.averageSpeedLabel.text = NSString(format: "Speed: %.f km/h", velocityKmH)
+
     }
     
 }
