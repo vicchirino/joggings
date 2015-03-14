@@ -41,7 +41,7 @@ class HomeTableViewCell: UITableViewCell {
         if(hours > 0){
             timeString = NSString(format: "%.f h and %.f m", hours,minutes)
         }else{
-            timeString = NSString(format: "%.f minutes",minutes)
+            timeString = NSString(format: "%.1f minutes",minutes)
         }
         self.timeLabel.text = timeString        
     }

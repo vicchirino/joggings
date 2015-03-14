@@ -89,7 +89,7 @@ class AddJoggingTableViewController: UITableViewController {
         self.jogging = Jogging()
 
         self.jogging.distanceKm = array[0] as NSString
-        self.jogging.minutes = NSNumber(integer: array[1].integerValue)
+        self.jogging.minutes = NSNumber(float: array[1].floatValue)
         self.jogging.date = dateFormatter.dateFromString(array[2] as NSString)
         self.jogging.userID = PFUser.currentUser()
         
