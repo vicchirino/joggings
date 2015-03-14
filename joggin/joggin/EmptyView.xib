@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Bacon-Kingdom.ttf">
+            <string>BaconKingdom</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptyView" customModule="joggin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No joggins between dates selected. Try another date!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sO-5p-UHy" userLabel="descriptionLabel">
+                    <rect key="frame" x="20" y="100" width="560" height="55"/>
+                    <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="26"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.82650726010101017" green="0.82650726010101017" blue="0.82650726010101017" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2sO-5p-UHy" secondAttribute="trailing" constant="20" id="8cL-oP-3uA"/>
+                <constraint firstAttribute="centerY" secondItem="2sO-5p-UHy" secondAttribute="centerY" constant="-0.5" id="9T6-8h-StK"/>
+                <constraint firstItem="2sO-5p-UHy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="U2K-sc-w2G"/>
+                <constraint firstAttribute="centerX" secondItem="2sO-5p-UHy" secondAttribute="centerX" id="ViJ-xw-lmW"/>
+                <constraint firstItem="2sO-5p-UHy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="d2O-1V-AM6"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="9T6-8h-StK"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="descriptionLabel" destination="2sO-5p-UHy" id="Mu1-QB-qSz"/>
+            </connections>
+        </view>
+    </objects>
+</document>

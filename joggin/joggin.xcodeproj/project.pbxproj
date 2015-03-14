@@ -56,6 +56,8 @@
 		7FC6B2C91AAA1BC9000F253B /* CustomPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC6B2C81AAA1BC9000F253B /* CustomPickerView.xib */; };
 		7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2CA1AAA1D04000F253B /* AddJoggingTableViewController.swift */; };
 		7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */; };
+		B5177F7E1AB4FC2F0038D282 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5177F7D1AB4FC2F0038D282 /* EmptyView.swift */; };
+		B5177F801AB4FC460038D282 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5177F7F1AB4FC460038D282 /* EmptyView.xib */; };
 		B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */; };
 		B574D2A11AA957BE0056E624 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */; };
 		B5947F7D1AAFC51500F57811 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5947F7C1AAFC51500F57811 /* ResultsTableViewController.swift */; };
@@ -136,6 +138,8 @@
 		7FC6B2C81AAA1BC9000F253B /* CustomPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPickerView.xib; sourceTree = "<group>"; };
 		7FC6B2CA1AAA1D04000F253B /* AddJoggingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddJoggingTableViewController.swift; sourceTree = "<group>"; };
 		7FC6B2CC1AAA1D80000F253B /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		B5177F7D1AB4FC2F0038D282 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B5177F7F1AB4FC460038D282 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		B574D29E1AA957BE0056E624 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		B574D29F1AA957BE0056E624 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		B5947F7C1AAFC51500F57811 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +308,8 @@
 				7FB3D4921AAF7EA400D2ECA6 /* UIColor+FlatColors.m */,
 				7FB3D4941AAF8B2F00D2ECA6 /* FilterViewController.swift */,
 				B5947F7C1AAFC51500F57811 /* ResultsTableViewController.swift */,
+				B5177F7D1AB4FC2F0038D282 /* EmptyView.swift */,
+				B5177F7F1AB4FC460038D282 /* EmptyView.xib */,
 			);
 			name = filter;
 			sourceTree = "<group>";
@@ -448,6 +454,7 @@
 				7F761AAC1AB1FF6900F7834D /* Bacon-Kingdom.ttf in Resources */,
 				7F761AAE1AB1FF7700F7834D /* CFBacktoSchool-Regular.ttf in Resources */,
 				7FC6B2C91AAA1BC9000F253B /* CustomPickerView.xib in Resources */,
+				B5177F801AB4FC460038D282 /* EmptyView.xib in Resources */,
 				7F84320D1AB0960700113002 /* Images.xcassets in Resources */,
 				7F4AF6001AA78AC90056D1C6 /* login.storyboard in Resources */,
 				7F0B35F41AA771CE00FC00EF /* Main.storyboard in Resources */,
@@ -484,6 +491,7 @@
 				B574D2A01AA957BE0056E624 /* HomeTableViewCell.swift in Sources */,
 				7FC6B2CD1AAA1D80000F253B /* EntryTableViewCell.swift in Sources */,
 				7F8283D21AA7A12E009B45D4 /* EmptySegue.swift in Sources */,
+				B5177F7E1AB4FC2F0038D282 /* EmptyView.swift in Sources */,
 				7F8283D01AA798B9009B45D4 /* SecondViewController.swift in Sources */,
 				7FB3D4901AAF7E8000D2ECA6 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				7FC6B2CB1AAA1D04000F253B /* AddJoggingTableViewController.swift in Sources */,

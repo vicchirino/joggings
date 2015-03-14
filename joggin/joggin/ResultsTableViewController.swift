@@ -11,7 +11,7 @@ import UIKit
 class ResultsTableViewController: UITableViewController {
     
     var joggingsArray :NSMutableArray = NSMutableArray()
-    var emptyStateView: EmptyStateView!
+    var emptyStateView: EmptyView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,9 +78,8 @@ class ResultsTableViewController: UITableViewController {
     }
     
     func addEmptyState(){
-        self.emptyStateView = EmptyStateView(frame: CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height))
+        self.emptyStateView = EmptyView(frame: CGRectMake(0, 0, self.tableView.frame.size.width, self.tableView.frame.size.height))
         self.emptyStateView.alpha = 0.0
-//        self.emptyStateView.descriptionLabel.text = "No joggins between dates selected. Try another date!"
         self.tableView.addSubview(self.emptyStateView)
         
         UIView.animateWithDuration(0.5, delay: 0.0, options: nil, animations: {
