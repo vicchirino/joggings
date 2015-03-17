@@ -31,14 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         
         
-        for family in UIFont.familyNames() {
-            NSLog("%@", family as NSString)
-            
-            for name in UIFont.fontNamesForFamilyName(family as NSString){
-                NSLog("%@", name as NSString)
-
-            }
-        }
+//        for family in UIFont.familyNames() {
+//            NSLog("%@", family as NSString)
+//            
+//            for name in UIFont.fontNamesForFamilyName(family as NSString){
+//                NSLog("%@", name as NSString)
+//
+//            }
+//        }
         
         return true
     }
