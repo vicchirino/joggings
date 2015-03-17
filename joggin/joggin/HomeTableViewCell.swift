@@ -56,7 +56,10 @@ class HomeTableViewCell: UITableViewCell {
     func setAverageSpeed(distance:NSString, time:NSNumber){
         var hours:Float = time.floatValue/60
         var velocityKmH = (distance.floatValue / hours)
-        self.averageSpeedLabel.text = NSString(format: "Speed: %.f km/h", velocityKmH)
+        if hours == 0 {
+            velocityKmH = 0
+        }
+        self.averageSpeedLabel.text = NSString(format: "Speed: %.1f km/h", velocityKmH)
 
     }
     

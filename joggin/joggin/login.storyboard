@@ -72,7 +72,7 @@
                                     <segue destination="2mI-yP-1Sh" kind="embed" identifier="embedContainer" id="jsK-DX-IWT"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jogging" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-Vn-1n7" userLabel="title">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jogging" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="yJC-Vn-1n7" userLabel="title">
                                 <rect key="frame" x="56" y="70" width="488" height="65"/>
                                 <fontDescription key="fontDescription" name="BaconKingdom" family="Bacon Kingdom" pointSize="58"/>
                                 <color key="textColor" red="1" green="0.70588235290000001" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
