@@ -79,6 +79,33 @@ class FirstViewController: UIViewController {
         return true;
     }
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
+    {
+        
+        if ((range.length + range.location) > textField.text.utf16Count){
+            return false
+        }
+        
+        var newLength = textField.text.utf16Count + string.utf16Count - range.length
+        
+        if newLength > 10 {
+            return false
+        }else{
+            return true
+        }
+    }
+    
+//    - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+//    // Prevent crashing undo bug – see note below.
+//    if(range.length + range.location > textField.text.length)
+//    {
+//    return NO;
+//    }
+//    
+//    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+//    return (newLength > 25) ? NO : YES;
+//    }
+    
     //MARK: Parse
     
     func login(username: NSString, password: NSString) {

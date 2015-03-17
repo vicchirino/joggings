@@ -90,7 +90,22 @@ class SecondViewController: UIViewController {
         return true;
     }
 
-    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
+    {
+        
+        if ((range.length + range.location) > textField.text.utf16Count){
+            return false
+        }
+        
+        var newLength = textField.text.utf16Count + string.utf16Count - range.length
+        
+        if newLength > 10 {
+            return false
+        }else{
+            return true
+        }
+    }
+        
     func dropKeyboard(){
         usernameTextfield.resignFirstResponder()
         passwordTextfield.resignFirstResponder()

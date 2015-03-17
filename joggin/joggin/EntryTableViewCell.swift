@@ -29,11 +29,31 @@ class EntryTableViewCell: UITableViewCell, UITextFieldDelegate{
         return true;
     }
     
+    func canAddACharacter(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool{
+        
+        if ((range.length + range.location) > textField.text.utf16Count){
+            return false
+        }
+        
+        var newLength = textField.text.utf16Count + string.utf16Count - range.length
+        
+        if newLength > 10 {
+            return false
+        }else{
+            return true
+        }
+        
+    }
+    
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool { // return NO to not change text
         
         switch string {
         case "0","1","2","3","4","5","6","7","8","9":
-            return true
+            if self.canAddACharacter(textField, shouldChangeCharactersInRange: range, replacementString: string){
+                return true
+            }else{
+                return false
+            }
         case ".":
             let array = Array(textField.text)
             var decimalCount = 0
@@ -46,13 +66,19 @@ class EntryTableViewCell: UITableViewCell, UITextFieldDelegate{
             if decimalCount == 1 {
                 return false
             } else {
-                return true
-            }
+                if self.canAddACharacter(textField, shouldChangeCharactersInRange: range, replacementString: string){
+                    return true
+                }else{
+                    return false
+                }            }
         default:
             let array = Array(string)
             if array.count == 0 {
-                return true
-            }
+                if self.canAddACharacter(textField, shouldChangeCharactersInRange: range, replacementString: string){
+                    return true
+                }else{
+                    return false
+                }            }
             return false
         }
     }
