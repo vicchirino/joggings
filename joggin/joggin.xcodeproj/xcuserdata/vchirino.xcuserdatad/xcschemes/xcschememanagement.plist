@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Copy of Notification - joggin WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Glance - joggin WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Notification - joggin WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>joggin WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>joggin.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>7F0B35FD1AA771CE00FC00EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F541DCE1ABB683700F6534D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

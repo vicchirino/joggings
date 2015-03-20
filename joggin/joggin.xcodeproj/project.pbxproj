@@ -36,6 +36,16 @@
 		7F4AF5F91AA786F60056D1C6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F4AF5F81AA786F60056D1C6 /* libsqlite3.dylib */; };
 		7F4AF6001AA78AC90056D1C6 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F4AF5FF1AA78AC90056D1C6 /* login.storyboard */; };
 		7F4AF6021AA78D250056D1C6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4AF6011AA78D250056D1C6 /* LoginViewController.swift */; };
+		7F541DC61ABB683700F6534D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F541DC51ABB683700F6534D /* InterfaceController.swift */; };
+		7F541DC81ABB683700F6534D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F541DC71ABB683700F6534D /* NotificationController.swift */; };
+		7F541DCA1ABB683700F6534D /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F541DC91ABB683700F6534D /* GlanceController.swift */; };
+		7F541DCC1ABB683700F6534D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F541DCB1ABB683700F6534D /* Images.xcassets */; };
+		7F541DD01ABB683700F6534D /* joggin WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7F541DCF1ABB683700F6534D /* joggin WatchKit App.app */; };
+		7F541DD81ABB683700F6534D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F541DD61ABB683700F6534D /* Interface.storyboard */; };
+		7F541DDA1ABB683700F6534D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F541DD91ABB683700F6534D /* Images.xcassets */; };
+		7F541DDD1ABB683700F6534D /* joggin WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7F541DC01ABB683700F6534D /* joggin WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7F541DE61ABB721600F6534D /* MyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F541DE51ABB721600F6534D /* MyRowController.swift */; };
+		7F541DE81ABC872B00F6534D /* ListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F541DE71ABC872B00F6534D /* ListInterfaceController.swift */; };
 		7F5B59D81AA8A91200D97024 /* PZUILoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5B59D71AA8A91200D97024 /* PZUILoader.m */; };
 		7F761AAC1AB1FF6900F7834D /* Bacon-Kingdom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F761AAB1AB1FF6900F7834D /* Bacon-Kingdom.ttf */; };
 		7F761AAE1AB1FF7700F7834D /* CFBacktoSchool-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F761AAD1AB1FF7700F7834D /* CFBacktoSchool-Regular.ttf */; };
@@ -72,7 +82,35 @@
 			remoteGlobalIDString = 7F0B35E51AA771CE00FC00EF;
 			remoteInfo = joggin;
 		};
+		7F541DD11ABB683700F6534D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0B35DE1AA771CE00FC00EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F541DCE1ABB683700F6534D;
+			remoteInfo = "joggin WatchKit App";
+		};
+		7F541DDB1ABB683700F6534D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F0B35DE1AA771CE00FC00EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F541DBF1ABB683700F6534D;
+			remoteInfo = "joggin WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7F541DE41ABB683800F6534D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7F541DDD1ABB683700F6534D /* joggin WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7F0B35E61AA771CE00FC00EF /* joggin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joggin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +147,19 @@
 		7F4AF5FA1AA787640056D1C6 /* joggin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "joggin-Bridging-Header.h"; sourceTree = "<group>"; };
 		7F4AF5FF1AA78AC90056D1C6 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		7F4AF6011AA78D250056D1C6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7F541DC01ABB683700F6534D /* joggin WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "joggin WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F541DC31ABB683700F6534D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F541DC41ABB683700F6534D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7F541DC51ABB683700F6534D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7F541DC71ABB683700F6534D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7F541DC91ABB683700F6534D /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		7F541DCB1ABB683700F6534D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F541DCF1ABB683700F6534D /* joggin WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "joggin WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F541DD51ABB683700F6534D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F541DD71ABB683700F6534D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7F541DD91ABB683700F6534D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7F541DE51ABB721600F6534D /* MyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRowController.swift; sourceTree = "<group>"; };
+		7F541DE71ABC872B00F6534D /* ListInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInterfaceController.swift; sourceTree = "<group>"; };
 		7F5B59D61AA8A91200D97024 /* PZUILoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZUILoader.h; sourceTree = "<group>"; };
 		7F5B59D71AA8A91200D97024 /* PZUILoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZUILoader.m; sourceTree = "<group>"; };
 		7F761AAB1AB1FF6900F7834D /* Bacon-Kingdom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bacon-Kingdom.ttf"; sourceTree = "<group>"; };
@@ -179,12 +230,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F541DBD1ABB683700F6534D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7F0B35DD1AA771CE00FC00EF = {
 			isa = PBXGroup;
 			children = (
+				7F541DC11ABB683700F6534D /* joggin WatchKit Extension */,
+				7F541DD31ABB683700F6534D /* joggin WatchKit App */,
 				7F4AF5D51AA786460056D1C6 /* Frameworks */,
 				7F0B35E81AA771CE00FC00EF /* joggin */,
 				7F0B36011AA771CE00FC00EF /* jogginTests */,
@@ -197,6 +257,8 @@
 			children = (
 				7F0B35E61AA771CE00FC00EF /* joggin.app */,
 				7F0B35FE1AA771CE00FC00EF /* jogginTests.xctest */,
+				7F541DC01ABB683700F6534D /* joggin WatchKit Extension.appex */,
+				7F541DCF1ABB683700F6534D /* joggin WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -289,6 +351,47 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		7F541DC11ABB683700F6534D /* joggin WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7F541DC51ABB683700F6534D /* InterfaceController.swift */,
+				7F541DC71ABB683700F6534D /* NotificationController.swift */,
+				7F541DC91ABB683700F6534D /* GlanceController.swift */,
+				7F541DE51ABB721600F6534D /* MyRowController.swift */,
+				7F541DE71ABC872B00F6534D /* ListInterfaceController.swift */,
+				7F541DCB1ABB683700F6534D /* Images.xcassets */,
+				7F541DC21ABB683700F6534D /* Supporting Files */,
+			);
+			path = "joggin WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7F541DC21ABB683700F6534D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F541DC31ABB683700F6534D /* Info.plist */,
+				7F541DC41ABB683700F6534D /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F541DD31ABB683700F6534D /* joggin WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7F541DD61ABB683700F6534D /* Interface.storyboard */,
+				7F541DD91ABB683700F6534D /* Images.xcassets */,
+				7F541DD41ABB683700F6534D /* Supporting Files */,
+			);
+			path = "joggin WatchKit App";
+			sourceTree = "<group>";
+		};
+		7F541DD41ABB683700F6534D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7F541DD51ABB683700F6534D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		7F5B59D51AA8A90400D97024 /* loader */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,10 +482,12 @@
 				7F0B35E21AA771CE00FC00EF /* Sources */,
 				7F0B35E31AA771CE00FC00EF /* Frameworks */,
 				7F0B35E41AA771CE00FC00EF /* Resources */,
+				7F541DE41ABB683800F6534D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7F541DDC1ABB683700F6534D /* PBXTargetDependency */,
 			);
 			name = joggin;
 			productName = joggin;
@@ -407,6 +512,39 @@
 			productReference = 7F0B35FE1AA771CE00FC00EF /* jogginTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7F541DBF1ABB683700F6534D /* joggin WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F541DE31ABB683800F6534D /* Build configuration list for PBXNativeTarget "joggin WatchKit Extension" */;
+			buildPhases = (
+				7F541DBC1ABB683700F6534D /* Sources */,
+				7F541DBD1ABB683700F6534D /* Frameworks */,
+				7F541DBE1ABB683700F6534D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F541DD21ABB683700F6534D /* PBXTargetDependency */,
+			);
+			name = "joggin WatchKit Extension";
+			productName = "joggin WatchKit Extension";
+			productReference = 7F541DC01ABB683700F6534D /* joggin WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		7F541DCE1ABB683700F6534D /* joggin WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F541DE21ABB683800F6534D /* Build configuration list for PBXNativeTarget "joggin WatchKit App" */;
+			buildPhases = (
+				7F541DCD1ABB683700F6534D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "joggin WatchKit App";
+			productName = "joggin WatchKit App";
+			productReference = 7F541DCF1ABB683700F6534D /* joggin WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -423,6 +561,13 @@
 					7F0B35FD1AA771CE00FC00EF = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 7F0B35E51AA771CE00FC00EF;
+					};
+					7F541DBF1ABB683700F6534D = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = LPRQV9JG9T;
+					};
+					7F541DCE1ABB683700F6534D = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -441,6 +586,8 @@
 			targets = (
 				7F0B35E51AA771CE00FC00EF /* joggin */,
 				7F0B35FD1AA771CE00FC00EF /* jogginTests */,
+				7F541DBF1ABB683700F6534D /* joggin WatchKit Extension */,
+				7F541DCE1ABB683700F6534D /* joggin WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -467,6 +614,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F541DBE1ABB683700F6534D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F541DD01ABB683700F6534D /* joggin WatchKit App.app in Resources */,
+				7F541DCC1ABB683700F6534D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F541DCD1ABB683700F6534D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F541DD81ABB683700F6534D /* Interface.storyboard in Resources */,
+				7F541DDA1ABB683700F6534D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +679,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F541DBC1ABB683700F6534D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F541DC81ABB683700F6534D /* NotificationController.swift in Sources */,
+				7F541DC61ABB683700F6534D /* InterfaceController.swift in Sources */,
+				7F541DE61ABB721600F6534D /* MyRowController.swift in Sources */,
+				7F541DCA1ABB683700F6534D /* GlanceController.swift in Sources */,
+				7F541DE81ABC872B00F6534D /* ListInterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -521,6 +698,16 @@
 			isa = PBXTargetDependency;
 			target = 7F0B35E51AA771CE00FC00EF /* joggin */;
 			targetProxy = 7F0B35FF1AA771CE00FC00EF /* PBXContainerItemProxy */;
+		};
+		7F541DD21ABB683700F6534D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F541DCE1ABB683700F6534D /* joggin WatchKit App */;
+			targetProxy = 7F541DD11ABB683700F6534D /* PBXContainerItemProxy */;
+		};
+		7F541DDC1ABB683700F6534D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F541DBF1ABB683700F6534D /* joggin WatchKit Extension */;
+			targetProxy = 7F541DDB1ABB683700F6534D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -539,6 +726,14 @@
 				7F0B35F81AA771CE00FC00EF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7F541DD61ABB683700F6534D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F541DD71ABB683700F6534D /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -632,6 +827,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -652,6 +848,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -698,6 +895,70 @@
 			};
 			name = Release;
 		};
+		7F541DDE1ABB683800F6534D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "joggin WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7F541DDF1ABB683800F6534D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "joggin WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7F541DE01ABB683800F6534D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = joggin_WatchKit_Extension;
+				INFOPLIST_FILE = "joggin WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		7F541DE11ABB683800F6534D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = joggin_WatchKit_Extension;
+				INFOPLIST_FILE = "joggin WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -727,6 +988,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7F541DE21ABB683800F6534D /* Build configuration list for PBXNativeTarget "joggin WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F541DE01ABB683800F6534D /* Debug */,
+				7F541DE11ABB683800F6534D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7F541DE31ABB683800F6534D /* Build configuration list for PBXNativeTarget "joggin WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F541DDE1ABB683800F6534D /* Debug */,
+				7F541DDF1ABB683800F6534D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
