@@ -24,16 +24,19 @@ class ListInterfaceController: WKInterfaceController {
         super.init()
         
         // It is now safe to access interface objects.
-        self.configureTableWithData()
+        var defaults = NSUserDefaults.standardUserDefaults()
+        var joggins: NSMutableArray = defaults.objectForKey("joggings") as NSMutableArray
+        self.configureTableWithData(joggins)
     }
     
-    func configureTableWithData(){
-        self.table.setNumberOfRows(10, withRowType: "joggingCell")
+    func configureTableWithData(data: NSMutableArray){
+        self.table.setNumberOfRows(data.count, withRowType: "joggingCell")
         var index: Int
         for index = 0; index < self.table.numberOfRows; index++
         {
+            var joggingDistance = data[index] as NSString
             var theRow = self.table.rowControllerAtIndex(index) as MyRowController
-            theRow.distanceLabel.setText("10 km")
+            theRow.distanceLabel.setText(joggingDistance)
         }
     }
 

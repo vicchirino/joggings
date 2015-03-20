@@ -77,6 +77,18 @@ class HomeTableViewController: UITableViewController {
                 if self.joggingsArray.count > 0 {
                     self.removeEmptyStateView()
                     self.tableView.reloadData()
+                    
+                    var defaults = NSUserDefaults.standardUserDefaults()
+                    
+                    var joggingsDistanceArray = NSMutableArray()
+                    
+                    for jogging in self.joggingsArray{
+                        var aJogging: Jogging = jogging as Jogging
+                        joggingsDistanceArray.addObject(aJogging.distanceKm)
+                    }
+                    
+                    defaults.setObject(joggingsDistanceArray, forKey: "joggings")
+                    
                 }else{
                     self.addEmptyState()
                 }
